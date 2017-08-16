@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Beautiful Hugo</title>
-    <link>https://username.github.io/categories/</link>
-    <description>Recent content in Categories on Beautiful Hugo</description>
+    <title>Categories on MTGANALYZE</title>
+    <link>https://mtganalyze.github.io/categories/</link>
+    <description>Recent content in Categories on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Some Person)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Some Person)</webMaster>
     
-	<atom:link href="https://username.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mtganalyze.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R</title>
-      <link>https://username.github.io/categories/r/</link>
+      <link>https://mtganalyze.github.io/categories/r/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       <author>mtganalyze@gmail.com (Some Person)</author>
-      <guid>https://username.github.io/categories/r/</guid>
+      <guid>https://mtganalyze.github.io/categories/r/</guid>
       <description></description>
     </item>
     
