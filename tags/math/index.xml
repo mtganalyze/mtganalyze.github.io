@@ -5,8 +5,8 @@
     <link>https://mtganalyze.github.io/tags/math/</link>
     <description>Recent content in Math on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>mtganalyze@gmail.com (Some Person)</managingEditor>
-    <webMaster>mtganalyze@gmail.com (Some Person)</webMaster>
+    <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
+    <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     <lastBuildDate>Sun, 05 Mar 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
@@ -16,7 +16,7 @@
       <title>Math Sample</title>
       <link>https://mtganalyze.github.io/post/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>mtganalyze@gmail.com (Some Person)</author>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
       <guid>https://mtganalyze.github.io/post/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 

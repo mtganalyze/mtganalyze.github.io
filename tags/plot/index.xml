@@ -5,8 +5,8 @@
     <link>https://mtganalyze.github.io/tags/plot/</link>
     <description>Recent content in Plot on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>mtganalyze@gmail.com (Some Person)</managingEditor>
-    <webMaster>mtganalyze@gmail.com (Some Person)</webMaster>
+    <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
+    <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/tags/plot/index.xml" rel="self" type="application/rss+xml" />
@@ -16,7 +16,7 @@
       <title>Hello R Markdown</title>
       <link>https://mtganalyze.github.io/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <author>mtganalyze@gmail.com (Some Person)</author>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
       <guid>https://mtganalyze.github.io/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:

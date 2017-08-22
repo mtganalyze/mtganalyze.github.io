@@ -5,21 +5,21 @@
     <link>https://mtganalyze.github.io/page/</link>
     <description>Recent content in Pages on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>mtganalyze@gmail.com (Some Person)</managingEditor>
-    <webMaster>mtganalyze@gmail.com (Some Person)</webMaster>
+    <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
+    <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     
 	<atom:link href="https://mtganalyze.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About me</title>
+      <title>About this blog</title>
       <link>https://mtganalyze.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mtganalyze@gmail.com (Some Person)</author>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
       <guid>https://mtganalyze.github.io/page/about/</guid>
-      <description>My name is Inigo Montoya. I have the following qualities:
- I rock a great mustache I&amp;rsquo;m extremely loyal to my family  What else do you need?
-my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+      <description>Magic: the Gathering is a game bigger than its box. With over 10,000 individual cards Magic offers endless possibilities to play.
+Using mathematical and statistical tools I try to find analytical solutions for imho interesting quantitative problems in and around the game. This blog won&amp;rsquo;t make you a better player but it will show you underappreciated puzzles within the world of Magic.
+This blog was created using the R package blogdown package.</description>
     </item>
     
   </channel>

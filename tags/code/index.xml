@@ -5,8 +5,8 @@
     <link>https://mtganalyze.github.io/tags/code/</link>
     <description>Recent content in Code on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>mtganalyze@gmail.com (Some Person)</managingEditor>
-    <webMaster>mtganalyze@gmail.com (Some Person)</webMaster>
+    <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
+    <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     <lastBuildDate>Tue, 08 Mar 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
@@ -16,7 +16,7 @@
       <title>Code Sample</title>
       <link>https://mtganalyze.github.io/post/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>mtganalyze@gmail.com (Some Person)</author>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
       <guid>https://mtganalyze.github.io/post/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
 

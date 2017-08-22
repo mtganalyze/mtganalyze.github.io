@@ -5,20 +5,11 @@
     <link>https://mtganalyze.github.io/categories/</link>
     <description>Recent content in Categories on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>mtganalyze@gmail.com (Some Person)</managingEditor>
-    <webMaster>mtganalyze@gmail.com (Some Person)</webMaster>
+    <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
+    <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     
 	<atom:link href="https://mtganalyze.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>R</title>
-      <link>https://mtganalyze.github.io/categories/r/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <author>mtganalyze@gmail.com (Some Person)</author>
-      <guid>https://mtganalyze.github.io/categories/r/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
