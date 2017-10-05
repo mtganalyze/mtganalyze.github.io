@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
-    <lastBuildDate>Mon, 11 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Extracted Value</title>
+      <link>https://mtganalyze.github.io/post/extract_value/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
+      <guid>https://mtganalyze.github.io/post/extract_value/</guid>
+      <description>Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job as an arctic explorer you rarely find time to play any bigger Magic events these days. It’s Friday and since you have no byes for the GP you are eager to play some trials. Surprisingly, Wizards Organized Play restructered the usual side event schedule.</description>
+    </item>
     
     <item>
       <title>Skills and Scores</title>

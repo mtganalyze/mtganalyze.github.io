@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Extracted Value</title>
+  <meta property="og:title" content="Extracted Value" />
+  <meta name="twitter:title" content="Extracted Value" />
+  <meta name="description" content="Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job as an arctic explorer you rarely find time to play any bigger Magic events these days. It’s Friday and since you have no byes for the GP you are eager to play some trials. Surprisingly, Wizards Organized Play restructered the usual side event schedule.">
+  <meta property="og:description" content="Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job as an arctic explorer you rarely find time to play any bigger Magic events these days. It’s Friday and since you have no byes for the GP you are eager to play some trials. Surprisingly, Wizards Organized Play restructered the usual side event schedule.">
+  <meta name="twitter:description" content="Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job …">
+  <meta name="author" content="Felix Weidemann"/>
+  <link href='https://mtganalyze.github.io/img/icon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <meta name="twitter:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mtganalyze" />
+  <meta name="twitter:creator" content="@mtganalyze" />
+  <meta property="og:url" content="https://mtganalyze.github.io/post/extract_value/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MTGANALYZE" />
+
+  <meta name="generator" content="Hugo 0.26" />
+  <link rel="canonical" href="https://mtganalyze.github.io/post/extract_value/" />
+  <link rel="alternate" href="https://mtganalyze.github.io/index.xml" type="application/rss+xml" title="MTGANALYZE">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/highlight.min.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mtganalyze.github.io">MTGANALYZE</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="MTGANALYZE" href="https://mtganalyze.github.io">
+            <img class="avatar-img" src="https://mtganalyze.github.io/img/theorist.jpg" alt="MTGANALYZE" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Extracted Value</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 5, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Let’s start with a small thought experiment: You are a semi-competitive and value-oriented <strong>Magic</strong> player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job as an arctic explorer you rarely find time to play any bigger Magic events these days. It’s Friday and since you have no byes for the GP you are eager to play some trials. Surprisingly, Wizards Organized Play restructered the usual side event schedule. You find the following offer: “One player Trial — $35 — winner receives two byes”. In other words, you have the opportunity to buy two byes for just 35 dollar. Would you take it?</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="../images/tempt.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 1: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>This question adresses a few interesting aspects. Do you actually want to pass on playing two matches of tournament Magic? Would you pay money to increase your chances for a top8 result and associated fame and reputation? Here however, I’m solely interested in the pure equity aspect of this deal. Do you actually receive a corresponding increase of expected cash prize for your investment of 35 dollar? This post’s main question is:</p>
+<p><strong>Given a certain score during a Grand Prix or Pro Tour, what are your expected tournament winnings (EV)?</strong></p>
+<p>Frank Karsten already adressed this topic by calculating the <a href="https://www.channelfireball.com/articles/frank-analysis-whats-the-ev-of-playing-a-gp/">expected cash prize for GPs</a> and <a href="https://www.channelfireball.com/articles/whats-the-ev-of-playing-a-pro-tour/">PTs</a>. I really appreciate his straightforward approach using a binomial distribution for the final score. What bugged me, however, was the simplifying assumption of a stationary win probability throughout the tournament. In my <a href="https://mtganalyze.github.io/post/skills_and_scores/">last post</a>, I argued that the win probability is in fact subject of variation due to different opponent skills in the various score brackets. Moreover, we even derived a model to estimate those win probabilities which I want to apply to our problem at hand.</p>
+<p>Secondly, Frank Karsten only computes the expected payout prior to the event. Here I want to take a look at how these numbers change mid-tournament depending on your score. For instance, is your EV higher at a score of 5-1 or at 7-2? Finally, I will present a web application, which can be used to compute your EV on the fly (you should scroll down if thats all what you want to see).</p>
+<div id="wpt-based-score-distributions" class="section level2">
+<h2>WPT based score distributions</h2>
+<p>In order to compute the expected winnings within a tournament we need two things. Firstly, we need to know how likely is each possible final tournament score. Secondly, we need information on what payout is associated with each of those scores. Combining these, we can compute the average, i.e. the expected, payout. In this section we focus on the final score distribution.</p>
+<p>In my <a href="https://mtganalyze.github.io/post/skills_and_scores/">last post</a> I introduced the win probability tree (WPT), which – for a player with a certain skill – assigned a win probability to each possible score bracket within a GP. Skill was thereby defined as a specific rating according to <a href="http://www.mtgeloproject.net/">MTGELOPROJECT</a>. For our purposes, the distribution of the final tournament score of the player can be directly derived from his WPT.</p>
+<p>To do so, we again denote by <span class="math">\(p_w^{(j)}(x)\)</span> the probability of winning a match within the score bracket “w wins after j rounds” given your rating of <span class="math">\(x\)</span>. For instance, <span class="math">\(p_1^{(2)}(x)\)</span> refers to the probability of winning your third round, if you have one win after two rounds. We now denote by <span class="math">\(\pi_w^{(j)}(x)\)</span> the probability of reaching the bracket “w wins after j rounds”. Thus, the vector <span class="math">\[\mathbf{\pi}^{(j)}(x) = \left( \pi_0^{(j)}(x), \ldots, \pi_j^{(j)}(x) \right)\]</span> represents the distribution over the possible scores, i.e. number of wins, after round <span class="math">\(j\)</span>. Assuming, you start with no byes, then your initial score is zero wins after zero rounds, which corresponds to a score distribution of <span class="math">\[\mathbf{\pi}^{(0)}(x) = \left( 1 \right).\]</span> The score distribution for the subsequent rounds can then be computed recursively via <span class="math">\[\pi_w^{(j)}(x) = \pi_w^{(j-1)}(x) \cdot (1-p_w^{(j-1)}(x)) +  \pi_{w-1}^{(j-1)}(x) \cdot p_{w-1}^{(j-1)}(x).\]</span> This formula for computing the probability of having <span class="math">\(w\)</span> wins after <span class="math">\(j\)</span> rounds looks only at the two possibilities, that you either already had <span class="math">\(w\)</span> wins after the previous rounds and lose the <span class="math">\(j\)</span>-th match or you had <span class="math">\(w-1\)</span> wins and win the <span class="math">\(j\)</span>-th match. For the two special cases of having either only wins (<span class="math">\(\pi_j^{(j)}(x)\)</span>) or having no wins (<span class="math">\(\pi_0^{(j)}(x)\)</span>) one of the two terms must be omitted accordingly. This recursive formula must be applied to compute every possible score for each round up to the final round of the tournament, e.g. for all 15 rounds within a GP.</p>
+<p>Note, that if the tournament has a day 2 cut requiring <span class="math">\(w^*\)</span> wins after <span class="math">\(j^*\)</span> rounds, we have to set the win probability <span class="math">\(p_w^{(j)}(x) = 0\)</span> if <span class="math">\(w &lt; w^*\)</span> and <span class="math">\(j \geq j^*\)</span>, as it is rather unlikely to win any more matches if you haven’t made the cut.</p>
+<p>The same procedure can be applied if we are interested in the final score distribution from a certain point during the tournament, e.g. from a score of 5-1. We just have to use a different initial distribution. Using the score of 5-1 as an example, we would have to set <span class="math">\[\mathbf{\pi}^{(6)}(x) = \left(0, 0, 0, 0, 0, 1, 0 \right),\]</span> such that the bracket “5 wins after 6 rounds” is assigned a probability of 100%. The subseqent score distributions for the following rounds could then again be computed recursively starting with this “distribution”.</p>
+<p>The biggest difference of applying the WPT based probabilities instead of assuming a stationary match win probability is that the resulting distribution is somewhat self-correcting. This is a consequence of the dynamic behaviour of match win probabilities within the WPT, which decrease after every match win and increase again after every loss. Thus, the final score distribution is a little under-dispersed, meaning that is has less variance than the simpler binomial distribution. Furthermore, the probability for achieving high scores of X-1 or X-2 is generally smaller, since the match win probability shrinks on the way to get there.</p>
+</div>
+<div id="score-associated-payouts" class="section level2">
+<h2>Score-associated payouts</h2>
+<p>Unfortunately, Knowing your final score does not tell you much about the money you win. For GPs and PTs the awarded prize money is tied to your rank in the final standings, which could be within a very wide range for most scores. Moreover, the range of, e.g., 12-3 players in the final standings of a GP depends on the total number of players and their number of byes. In this section I explain how to derive the expected payout for a given final score.</p>
+<p>The approach is basically the same as Frank Karsten used to compute the expected payouts. For a given number of players <span class="math">\(n\)</span> and given number of byes <span class="math">\(b_i\)</span>, (<span class="math">\(i=1,2,3\)</span>) within the first, second and third round, respectively, I first compute the final standings of the corresponding tournament, i.e. for a GP scenario I compute how many players play 15-0, how many play 14-1, and so on. To do so, I apply a similar algorithm as presented in my previous post, which works as follows:</p>
+<ol style="list-style-type: decimal">
+<li><p>All <span class="math">\(n\)</span> players start with a score of zero wins.</p></li>
+<li><p>For each round repeat steps <strong>3)</strong> to <strong>5)</strong>.</p></li>
+<li><p>Sort the players by score.</p></li>
+<li><p>The first <span class="math">\(b_i\)</span> players receive byes, with <span class="math">\(i\)</span> being the round number.</p></li>
+<li><p>The remaining players are paired by order of current standings, with the first player of each pairing receiving the match win.</p></li>
+<li><p>Make a final sort of the players by final score.</p></li>
+</ol>
+<p>The result of this procedure is a sorted list of all tournament players combined with their respective final scores. This list can then be used to derive the range of each score within the final standings. Thus, for a final number of wins <span class="math">\(w\)</span> let <span class="math">\(h_w\)</span> and <span class="math">\(l_w\)</span> denote the highest (worst) and lowest (best) rank among players with <span class="math">\(w\)</span> wins within the standings. Let <span class="math">\(y_r\)</span> be the <a href="https://magic.wizards.com/en/content/grand-prix-event-types-events">prize</a> <a href="https://magic.wizards.com/en/content/pro-tour-magic-event-types-events">money</a> that is associated with rank <span class="math">\(r\)</span>. Then the average prize money <span class="math">\(m_w\)</span> awarded to a player with <span class="math">\(w\)</span> wins can be calculated by <span class="math">\[m_w = \frac{1}{1+h_w-l_w}\sum_{r=l_w}^{h_w} y_r,\]</span> which is just the total money awarded to players with <span class="math">\(w\)</span> wins devided by the number of these players.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="../images/reward.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 2: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>The biggest flaw of this appraoch is that it doesn’t account for potential draws during the tournament, wether intentional or not. However, it is still possible to roughly incorporate draws for EV calculation, for instance if you are interested in the EV of a 3-1-1 score. This will be adressed later. Another limitation is that I don’t account for potential prize money and fundings associated with awarded PT invitations.</p>
+<p>Now <a href="https://www.youtube.com/watch?v=kbW5sxyu9bU">let our powers combine</a>! In order to compute the expected prize money payout <span class="math">\(m(x)\)</span> for a certain player with rating <span class="math">\(x\)</span> we can now just link this players final score distribution <span class="math">\(\mathbf{\pi}^{(j)}(x)\)</span> with the score-associated payouts <span class="math">\(m_w\)</span>, i.e. for a GP we have <span class="math">\[m(x) = \sum_{w=0}^{15} \pi_w^{(15)}(x) \cdot m_w.\]</span></p>
+<div id="average-joes-ev" class="section level4">
+<h4>Average Joe’s EV</h4>
+<p>To provide an example, let’s look at the prize money EV for an average player (Joe) within a 1500 player GP. Joe has a match win percentage of 50% against the overall GP field, which corresponds to an MTGELOPROJECT rating of 1554. For each possible score I computed Joe’ prize money EV, which are shown in the figure below. For this example I used the WPT according to the normal player density as described in my last post.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="../evcalculator/example.png" alt="Expected prize money by score for an average GP player. Grey lines connect scores with the same number of losses, i.e. the highest line marks the X-0 scores, the next line marks the X-1 scores, and so on."  />
+<p class="caption">
+Figure 3: Expected prize money by score for an average GP player. Grey lines connect scores with the same number of losses, i.e. the highest line marks the X-0 scores, the next line marks the X-1 scores, and so on.
+</p>
+</div>
+<p>Joe’s initial EV when starting the tournament is 12.79 $. After a perfect day 1 – at a score of 9-0 – Joe’s EV would have increased to 881,74 $. By looking at the Figure above it is clear that the biggest jumps in EV occur in the later rounds at the higher scores of, e.g., X-1 and X-2. Incidently, the biggest EV gap is between the scores 13-2 and 12-3, which usually marks the difference of making Top8 or not. Coming back to our initial thought experiment: if Joe would be able to buy two byes for this event, he could increase his EV from 12.79 $ to 34.57 $, which wouldn’t be worth the hypothetical investment of 35 dollar. My personal conclusion: play Chaos Drafts instead of Trials.</p>
+</div>
+<div id="expected-number-of-playmats" class="section level4">
+<h4>Expected number of playmats</h4>
+<p>Using the same approach, it is also possible to compute the top8 chance associated with every possible score during the tournament. To do so, instead of looking at the awarded prize money, we look at the number of awarded Top8 playmats, i.e. the first eight players each receive one while all other players go home empty handed. Your top8 chance is then equivalent to the expected number of playmats you win.</p>
+</div>
+</div>
+<div id="the-ev-calculator" class="section level2">
+<h2>The EV-Calculator</h2>
+<p>If you are interested in calculating your own EV during your upcoming tournament, may I present you the <strong>MTG-GP/PT-EV-Calculator</strong>, to be found here:</p>
+<p><strong>[<a href="https://mtganalyze.shinyapps.io/evcalculator/" class="uri">https://mtganalyze.shinyapps.io/evcalculator/</a>]</strong></p>
+<p>The calculator applies the model described above and calculates your expected winnings for a small variety of settings. In order to use it, you have to select the tournament type, GP or PT, your win rate against the player field and your current score. The EV-Calculator then shows you the following results:</p>
+<ul>
+<li><p>Your current Tournament EV in the form of money, Pro Points, and your Top8 Chance</p></li>
+<li><p>The amounts of Money, Pro Points, and Top8 Chance, that are at stake in your next match (i.e what is the difference in expected prize money if you win your next round compared to a loss in the next round)</p></li>
+<li><p>The MTGELORATING matching your win percentage against the field (this is useful for accurately setting you win percentage)</p></li>
+<li><p>Your corresponding WPT</p></li>
+</ul>
+<p>In order to compute these results, the calculator makes some assumptions I haven’t discussed so far. These are:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>TOP8 prizes:</strong> To compute your expected winnings in the case of making top8, the calculator computes your average win percentage against potential top8 players based on the simulatd standings and your WPT. This win probability is applied to every elimination round in order to compute your expected top8 payout.</p></li>
+<li><p><strong>Draws:</strong> Since draws were not possible in the simulated final tournament standings, it is not directly possible to derive were certain scores including draws would lead you. To still get a rough prediction, the calculator does the following. Three draws are transformed to one win and two losses. In the case of one or two draws, the calculator treats these as a loss, but instead of looking on the <em>average</em> payout associated with your final score, the calculator takes only the <em>best</em> payout matching your final score. Thus, for instance the prize money associated with a score of 12-2-1 is equal to the highest possible prize money of any 12-3 player.</p></li>
+<li><p><strong>Byes:</strong> In order to simulate the final standings, the calculator needs input data on how many byes are awarded in the first three rounds. To get these numbers I looked at four recent GPs (Turin, Washington DC, Metz, Indianapolis <em>all 2017</em>) and searched for the corresponding fraction of players with one, two, and three byes. I computed the average of these fractions, to obtain the following input: 42.4 % of players receive round one byes, 26.5 % receive byes for round two and a 1.9 % of all players receive three byes.</p></li>
+</ol>
+</div>
+<div id="end-of-turn" class="section level2">
+<h2>End of turn</h2>
+<p>I compured the calculator results with some of the numbers <a href="https://www.channelfireball.com/articles/frank-analysis-whats-the-ev-of-playing-a-gp/">derived by Frank Karsten</a>. For instance in a 900 person GP at zero byes and a win percentage of 60%, the calculator computes an expected prize money of 142 $ whereas Frank Karsten arrives at 155 $. The calculator generally computes slightly lower results, since according to the underlying model the win probabilities within the relevant score brackets are even smaller compared to the overall win percentage, while Frank Karsten’s model does not make this adjustment.</p>
+<p>What I also found to be very interesting that the amount of money at stake in the next round is most often larger than your current expected winning. Thus, you somewhat play double-or-nothing during your whole tournament life.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="../images/gambit.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 4: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>Lastly, I would again appreciate your feedback. Would you wish to obtain some further information from the <strong>MTG-GP/PT-EV-Calculator</strong>? If so, what are you interested in? Could you imagine to use the calculator during a tournament, maybe for motivational reasons? Please, let me hear your opinion.</p>
+</div>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://mtganalyze.github.io/post/skills_and_scores/" data-toggle="tooltip" data-placement="top" title="Skills and Scores">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mtganalyze" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:mtganalyze@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mtganalyze" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mtganalyze" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Felix Weidemann
+                      
+          
+          
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://mtganalyze.github.io">MTGANALYZE</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.26</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://mtganalyze.github.io/js/main.js"></script>
+<script src="https://mtganalyze.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://mtganalyze.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+
