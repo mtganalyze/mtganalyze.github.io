@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Curve Considerations</title>
+  <meta property="og:title" content="Curve Considerations" />
+  <meta name="twitter:title" content="Curve Considerations" />
+  <meta name="description" content="“What is the most important concept that Limited players should strive to understand?”.
+Ben Stark: “Not being too fancy. Most games are won or lost by hitting your mana curve.”
+In his Limited Information column Marshall Sutcliff once interviewed Ben Stark on limited advice. This particular piece was dubbed “THE TRUTH” and Ben Stark was spitting it. As one of his main messages Ben was pointing out the importance of having a mana curve.">
+  <meta property="og:description" content="“What is the most important concept that Limited players should strive to understand?”.
+Ben Stark: “Not being too fancy. Most games are won or lost by hitting your mana curve.”
+In his Limited Information column Marshall Sutcliff once interviewed Ben Stark on limited advice. This particular piece was dubbed “THE TRUTH” and Ben Stark was spitting it. As one of his main messages Ben was pointing out the importance of having a mana curve.">
+  <meta name="twitter:description" content="“What is the most important concept that Limited players should strive to understand?”.
+Ben Stark: “Not being too fancy. Most games are won or lost by hitting your mana curve.”
+In his Limited …">
+  <meta name="author" content="Felix Weidemann"/>
+  <link href='https://mtganalyze.github.io/img/icon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <meta name="twitter:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mtganalyze" />
+  <meta name="twitter:creator" content="@mtganalyze" />
+  <meta property="og:url" content="https://mtganalyze.github.io/post/curve_considerations/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MTGANALYZE" />
+
+  <meta name="generator" content="Hugo 0.26" />
+  <link rel="canonical" href="https://mtganalyze.github.io/post/curve_considerations/" />
+  <link rel="alternate" href="https://mtganalyze.github.io/index.xml" type="application/rss+xml" title="MTGANALYZE">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/highlight.min.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mtganalyze.github.io">MTGANALYZE</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="MTGANALYZE" href="https://mtganalyze.github.io">
+            <img class="avatar-img" src="https://mtganalyze.github.io/img/theorist.jpg" alt="MTGANALYZE" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Curve Considerations</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on November 15, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><em>“What is the most important concept that Limited players should strive to understand?”.</em></p>
+<p><strong>Ben Stark: “Not being too fancy. Most games are won or lost by hitting your mana curve.”</strong></p>
+<p>In his <em>Limited Information</em> column Marshall Sutcliff once interviewed <a href="https://en.wikipedia.org/wiki/Ben_Stark">Ben Stark</a> on limited advice. This <a href="https://magic.wizards.com/en/articles/archive/limited-information/truth-ben-stark-2015-06-10">particular piece</a> was dubbed <em>“THE TRUTH”</em> and Ben Stark was spitting it. As one of his main messages Ben was pointing out the importance of having a mana curve. Although many experienced and succesful limited players would immediately agree that a smooth mana curve is a necessacity for a good draft or sealed deck, it is very difficult to precisely nail down what makes a good curve. There are some <a href="https://magic.wizards.com/en/articles/archive/beyond-basics/how-build-mana-curve-2017-05-18">rules of thumb</a>, but beyond that there is no clear criteria to compare two decks in order to say which one has a “better” curve. Thus, this post’s topic is:</p>
+<p><strong>What are possible quantitative measures to define a good mana curve?</strong></p>
+<p>It is not very surprising that Frank Karsten already <a href="https://www.channelfireball.com/articles/frank-analysis-finding-the-optimal-mana-curve-via-computer-simulation/">took a stab</a> at this problem by searching for optimal mana curves via computer simulation for various contstructed formats. <em>(I promise, my next topic will be one that Frank has not already fully covered.)</em> Frank Karsten’s approach is as always clever and convenient. He separated the problem into two parts: <strong>(1)</strong> how does a particular mana curve translate into an in-game curve and <strong>(2)</strong> how can we assess the value of any particular in-game curve? Here I like to pick up this approach and especially I want to add and discuss possibilities regarding the second part. Like in my last posts the untiring reader will get rewarded with a ready-to-use web application to evaluate the mana curve of any limited deck.</p>
+<p>(This post is written with limited deck building in mind. However, all concepts can be easily applied to any contructed format.)</p>
+<div id="from-mana-curve-to-curving-out" class="section level2">
+<h2>From mana curve to curving out</h2>
+<style>
+  .technical {
+    background-color: #f0f0f0;   
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+  }
+</style>
+<p>When building a draft or sealed deck the typical procedure is to lay out your cards according to converted mana costs: with one pile of all one-drops, one pile of two-drops, and so on, from left to right (or from right to left if you like to see the world burn). This approach provides a quick overview over the number of cards in each mana cost slot in order to identify bumps in this so-called <em>mana curve</em>. It is common knowledge that a smooth curve with a priority on two-, three- and four-dops is generally a good indicator for your deck’s ability to actually <em>curve out</em>, which is to actually play those spells in your second, third and fourth turn of the game, respectively. This exact relation between your mana curve and your <em>executed curve</em> within a game however is hard to grasp and will be subject of this section.</p>
+<p>What you can frequently observe is players <em>goldfishing</em> with their newly built deck. They draw an opening hand from their shuffled library, play lands, draw cards and unopposedly deploy their spells. By doing so these players go to the next level and get a feel for the actual executed curve of their deck. This is still only a rough approximation of the in-game curve since your actual sample size is pretty low. However, this method does not require any actual play skills. So why shouldn’t your nearest computer or mobile phone do this for you?</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="../images/automaton.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 1: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>The following algorithm does exactly that. For a given decklist it calculates the mean executed curve, i.e. the average amount of mana your deck is capable to spent on spells on each specific turn. In order to not depend on strategic advice and to keep it simple, the algorithm works with some assumptions on your deck though:</p>
+<ul>
+<li><p>You only play proactive, unconditional spells. If the computer dummy notices that you can pay the mana cost of a spell, it will cast that spell. Fortunately, this “strategy” is valid for most types of spells such as creatures, direct damage, or to a lesser extent for enchantments and removal.</p></li>
+<li><p>All your spells have an immediate effect on the game. If you cast spells that don’t affect the board such as <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=384079">Divination</a> or <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=421480">Rampant Growth</a> it’s hard to argue that these spells <em>directly</em> contribute to your executed curve. Thus, we assume that every spell in your deck and therefore every mana you spent goes directly into board development. In <a href="https://magic.wizards.com/en/articles/archive/limited-information/cabs-theory-2015-08-19">CABS Theory</a> there is even an acknowledged strategy that propagates this play style.</p></li>
+<li><p>All your spells are colorless. This is admittedly a very crude assumption, especially for limited decks, but it makes calculating the executed curve so much easier.</p></li>
+</ul>
+<p>Another important property of the algorithm is that it is contained in a newly created grey math box. As suggested by one of the readers, from now on I will try to present any formulas or overly technical paragraphs in such an environment, which hopefully will make my posts more readable for those who like to skip the mathy stuff.</p>
+<div class="technical">
+<h4>Algorithm: Mean Executed Curve</h4>
+<p>Let <span class="math">\(x_i\)</span> denote the number of cards with converted mana cost <span class="math">\(i, (i=1, \ldots,n)\)</span> up to a maximum cost of <span class="math">\(n\)</span>. Let <span class="math">\(d\)</span> denote your overall deck size, i.e. <span class="math">\(d = 40\)</span> for serious draft decks. The number of lands <span class="math">\(l\)</span> is thus given by <span class="math">\(l = d - \sum_{i=1}^n x_i\)</span>. Let <span class="math">\(\mathbf{s} = (s_1, \ldots, s_d)\)</span> be a random permutation of your deck with <span class="math">\(s_i\)</span> taking values in <span class="math">\(\{0,\ldots, n \}\)</span>, i.e. <span class="math">\(\mathbf{s}\)</span> is a shuffled version of your dech where <span class="math">\(s_i\)</span> denotes the converted mana cost of the <span class="math">\(i\)</span>-th card in your shuffled deck and mana costs of zero refer to a land. Let <span class="math">\(\mathbf{s}\)</span> be the input of the following algorithm using a predefined number of turns <span class="math">\(T\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Let <span class="math">\(\mathcal{H}_0 = \{s_1, \ldots, s_7\}\)</span> be the first seven cards of your deck, i.e. your starting hand. Apply mulligans if necessary<span class="math">\(^*\)</span>. Let <span class="math">\(l_t\)</span> denote your number of lands on the battlefield after turn <span class="math">\(t\)</span>, with <span class="math">\(l_0 = 0\)</span>.</p></li>
+<li><p>For <span class="math">\(t = 1, \ldots, T\)</span> repeat steps <strong>3)</strong> to <strong>6)</strong>.</p></li>
+<li><p>Draw a card, i.e. put the top card of your library into your hand <span class="math">\[\mathcal{H}^{(d)}_{t} = \mathcal{H}_{t-1} \cup \{s_{7+t}\}\]</span></p></li>
+<li><p>Play a land if possible: If there exists an <span class="math">\(s \in \mathcal{H}^{(d)}_{t}\)</span> with <span class="math">\(s = 0\)</span>, then set <span class="math">\(l_t = l_{t-1} + 1\)</span> and <span class="math">\[\mathcal{H}^{(l)}_{t} = \mathcal{H}^{(d)}_{t} \setminus \{s\}.\]</span> Otherwise set <span class="math">\(\mathcal{H}^{(l)}_{t} = \mathcal{H}^{(d)}_{t}\)</span> and <span class="math">\(l_t = l_{t-1}\)</span>.</p></li>
+<li><p>Play spells from your hand: Let <span class="math">\(m = l_t\)</span> be the available amount of mana in this turn <span class="math">\(t\)</span>. Let <span class="math">\(\bar{s}^{(1)}\)</span> be the highest mana cost of all spells that are castable, i.e. <span class="math">\[\bar{s}^{(1)} = \max\{s | s \in \mathcal{H}^{(l)}_{t}, s \leq m\}.\]</span> If <span class="math">\(\bar{s}^{(1)} &lt; m\)</span>, then let <span class="math">\(\bar{s}^{(2)}\)</span> be the highest combined mana cost of any two spells that are castable simultaneously in this turn, i.e. <span class="math">\[\bar{s}^{(2)} = \max\{s + r | s,r \in \mathcal{H}^{(l)}_{t}, s+r \leq m\}.\]</span> If <span class="math">\(\bar{s}^{(1)} \geq \bar{s}^{(2)}\)</span>, then set <span class="math">\(y_t = \bar{s}^{(1)}\)</span> to be the amount of mana you spent this turn and update your hand via <span class="math">\[\mathcal{H}^{(s)}_{t} = \mathcal{H}^{(l)}_{t} \setminus \{s\},\]</span> where <span class="math">\(s\)</span> is a spell with mana cost <span class="math">\(\bar{s}^{(1)}\)</span>. Otherwise, set <span class="math">\(y_t = \bar{s}^{(2)}\)</span> and <span class="math">\[\mathcal{H}^{(s)}_{t} = \mathcal{H}^{(l)}_{t} \setminus \{s,r\},\]</span> where <span class="math">\(s,r\)</span> are spells from your hand with combined manacost <span class="math">\(\bar{s}^{(2)}\)</span>. Then, if <span class="math">\(m - y_t &gt; 0\)</span> repeat step <strong>5)</strong> with available mana <span class="math">\(\tilde{m} = m - y_t\)</span> and add the spent mana to <span class="math">\(y_t\)</span>. Repeat this procedure until can’t cast any more spells from your hand.</p></li>
+<li><p>Set your end of turn hand, i.e. <span class="math">\[\mathcal{H}_{t} = \mathcal{H}^{(s)}_{t}\]</span></p></li>
+</ol>
+<p>As output from this algorithm one obtains a sequence <span class="math">\(\mathbf{y} = (y_1, \ldots, y_T)\)</span> which represents the amount of mana that is spent each turn given the permutation <span class="math">\(\mathbf{s}\)</span>. Since the permutation of the deck is actually a random quantity the corresponding sequence <span class="math">\(\mathbf{y}\)</span> and its components <span class="math">\(y_t\)</span> are also random variables. In order to get a Monte Carlo estimate for the expected mana spent <span class="math">\(\bar{y}_t = \mathbb{E}[y_t]\)</span> in each turn, one applies the above algorithm to a large sample of deck permutations <span class="math">\(\mathbf{s}^{(i)}, (i=1,\ldots,N)\)</span> with corresponding results <span class="math">\(\mathbf{y}^{(i)}\)</span>. Then the mean executed curve is computed componentwise by <span class="math">\[ \bar{y}_t = N^{-1} \sum_{i=1}^{N} y_t^{(i)}.\]</span></p>
+<span class="math">\(^*\)</span>The mulligan strategy is to mulligan any seven or six card hand with fewer than two lands or fewer than two spells. Any five card hand will be kept. Mulliganing means that the algorithm is started over with a new deck permutation and one fewer card in hand.
+</div>
+<p>This algorithm performs pure goldfishing, playing spells from the hand as early as possible and counting how much mana is spent each turn doing so. Iterating this many thousand times gives a good grasp on how much mana a deck is capable to spent on average in each specific turn.</p>
+<p>The algorithm is very similar to that of Frank Karsten. I only skimmed over his code, so please correct me if I’m wrong, but i believe there are two meaningful (but not huge) differences. Firstly, the procedure to select which spells to cast is much simpler in Frank Karsten’s version, in which only the one most expensive spell among all castable spells is cast each turn whereas the above algorithm checks additionally if there are any better two-card combinations and also looks if remaining mana can be spent on some cheaper spells in the hand. Secondly Frank Karsten uses a much more sophisticated mulligan rule derived through <a href="https://en.wikipedia.org/wiki/Stochastic_programming">Stochastic Programming</a>. My mulligan rule applied here is pure heuristic.</p>
+<p>Let’s take a look at how the algorithms performs by applying it to an example deck, which i call the <em>Wall of Mana</em>. The <em>Wall of Mana</em> consists of four cards of each converted mana cost from one to six and sixteen lands. This decks mana curve is graphically presented below (upper figure).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="../curveevaluation/wallofmanacurve.png" alt="Mana curve and mean executed curve of the &quot;wall of mana&quot;"  />
+<p class="caption">
+Figure 2: Mana curve and mean executed curve of the “wall of mana”
+</p>
+</div>
+<p>The lower figure provides the corresponding mean executed curve as computed by the algorithm above. For each turn the respective average mana spent is plotted together with confidence intervals regarding the estimate for the mean. This deck reaches its peak in turn six with on average 3.2 mana spent. For turns seven and higher the expected spent mana decreases to around 2.2, which represents the average mana costs of the top card of the library, since the deck is likely in top deck mode by then.</p>
+</div>
+<div id="evaluate-the-curve" class="section level2">
+<h2>Evaluate the Curve</h2>
+<p>Although computing the mean executed curve requires some computer power, this is actually the somewhat easy task, because there exists a clear solution to the problem. Within this section we will deal with the problem on how to evaluate a given executed curve, which will not be as straightforward.</p>
+<p>The main difficulty of this problem is to condense the mean executed curve consisting of mulitple variables – i.e. the expected amounts of mana spent in turns one, two, and so on – to one single number measuring the “power” of the curve. Thus, decks with good executed curves should obtain higher scores, whatever “good” means in this context?! Frank Karsten approached this problem by calculating the total amount of mana spent in the first X turns, where X was some value between three and six. His argument was, that in any specific constructed format from <em>Modern</em> to <em>Block Constructed</em> there exists a critical turn in which (<em>on average</em>) the game is actually or virutally over in the sense that it is clear which player is going to win the game. For instance, in <em>Modern</em> the winner should be determined after on average four turns, for <em>Standard</em> this would take five turns.</p>
+<p>Although I think this method is a little too simple, the overall approach of calculating an <a href="https://en.wikipedia.org/wiki/Index_(statistics)">index</a> is very reasonable. An index is a function which summarizes multiple measures into one single score. For instance, Frank Karsten constructed his index (the <em>K-index</em> from now on) as the sum of mana spent in the first X turns whereas mana spent in every further turn is not accouted for. Moreover, although being very simple the K-index suggests two heuristics that any reasonable index function for mana curves evaluation should fulfill:</p>
+<ol style="list-style-type: decimal">
+<li><p><em>The more mana the better</em>: The overall index score should not decrease, if the amount of expected mana increases for any given turn. Playing a <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=148541&amp;part=Hill+Giant">Hill Giant</a> should never be worse than playing <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=148532">Grizzly Bears</a>.</p></li>
+<li><p><em>The earlier the better</em>: The overall index function should not decrease, if the same amount of spent mana is shifted to an earlier turn. Playing Grizzly Bears on turn two should be at least as good as on turn four. This heuristic acually accounts for two aspects. Firstly, especially for board affecting spells like creatures it’s always better to play them as early as possible in order to increase their impact on the game. Secondly, each game only lasts so many turns, which means that if your deck is capable of spending on average X mana on turn 10 it’s not guaranteed that you actually reach this turn in a given game. This decreasing probability to reach the later turns of the game should be accounted for.</p></li>
+</ol>
+<p>In the following I want to present potential index functions to evaluated any given executed curve. For this purpose an index will be characterized through weights <span class="math">\(w_t\)</span> which represent the relative impact of mana spent in each turn <span class="math">\(t\)</span>. Thus, if for instance an index has the weights <span class="math">\(w_1 = 1\)</span> and <span class="math">\(w_2 = 0.8\)</span>, this means that this index will fully account for mana spent on turn one whereas mana spent on turn two has a shrinked impact with a factor of 0.8.</p>
+<div class="technical">
+<h4>Index for Curve Evaluation</h4>
+<p>Let <span class="math">\(\mathcal{I}\)</span> be an index function with weights <span class="math">\(\{w_t\}_{t=1,\ldots,T}\)</span> up to turn <span class="math">\(T\)</span>. For any mean executed curve <span class="math">\(\mathbf{\bar{y}} = (\bar{y}_1, \ldots, \bar{y}_T)\)</span> the index <span class="math">\(\mathcal{I}\)</span> evaluates this curve through the weighted sum of spent mana, i.e. by <span class="math">\[\mathcal{I}(\mathbf{\bar{y}}) = \sum_{t=1}^T w_t\cdot \bar{y}_t.\]</span> Translating the above mentioned heurstics into restrictions on <span class="math">\(\{w_t\}_{t=1,\ldots,T}\)</span> in order to have a reasonable index <span class="math">\(\mathcal{I}\)</span>, we obtain the conditions <span class="math">\(w_t \geq 0\)</span> for all <span class="math">\(t \in \{1,\ldots,T\}\)</span> and <span class="math">\(w_t \geq w_s\)</span> for <span class="math">\(t &lt; s\)</span>.</p>
+(Note, that this is not the only possibility to construct suitable index functions, e.g. a more general approach would be to define <span class="math">\[\mathcal{I}(\mathbf{\bar{y}}) = \sum_{t=1}^T w_t(\bar{y}_t),\]</span> for a family of functions <span class="math">\(\{w_t\}\)</span> fulfilling the same restrictions, i.e monotony with respect to <span class="math">\(t\)</span> and <span class="math">\(y\)</span>.)
+</div>
+<p>So let’s look at some potential candidates for index functions and their associated weights.</p>
+<div id="k-index" class="section level4">
+<h4>K-Index</h4>
+<p>As introduced by Frank Karsten, the K-Index fully accounts for and sums up the mana spent within the first X turns and does not acount for any mana spent in subsequent turns. Thus, if for instance we set X=5 the respective weights would be <span class="math">\(w_1 = \ldots = w_5 = 1\)</span> and <span class="math">\(w_6 = w_7 = \ldots = 0\)</span>. The corresponding weight curve is given below.</p>
+<p><img src="/post/2017-10-29-curve-considerations_files/figure-html/unnamed-chunk-3-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Although the K-Index provides a very simple first approach to evaluate executed curves, it has some weaknesses in my opinion. First of all, setting a specific critical turn at which the game is deemed to be virtually over is rather crude. While it might be correct that <strong>on average</strong> a game of <em>Standard</em> lasts five turns, that does not imply that <strong>every</strong> game of standard is finished after exactly five turns. However, according to the K-Index (X=5) everything you do after turn five is meaningless to the game, which I think is oversimplified. On the other hand, the first five turns are treated equally in the sense that there is no form of downgrading for mana spent in later turns. For instance, in current <em>Standard</em> a <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=418564&amp;part=Bomat+Courier">Bomat Courier</a> is much more impactful on turn one in contrast to turn four or five. The K-Index does not account for that.</p>
+</div>
+<div id="full-utilization-index" class="section level4">
+<h4>Full-Utilization-Index</h4>
+<p>The <em>Full-Utilization-Index</em> (<em>FU-Index</em>) picks up the idea that a good curve uses all available mana in every turn. A two-drop on turn two is of equal value as a four-drop on turn four. Thus, each turn is evaluated by measuring how much mana was spent in relation to the amount of mana that is potentially available in that turn. For instance, for turn two we are interested in the share of mana spent among the two available mana. This leads to the weights <span class="math">\(w_1 = 1\)</span>, <span class="math">\(w_2 = 1/2\)</span>, <span class="math">\(w_3 = 1/3\)</span>, and so on. These weights seem to put a high priority on the earlier turns, especially the first turn since each one mana in a given turn is only worth it’s share of the potentially available mana in that turn. See below for the corresponding weight curve.</p>
+<p><img src="/post/2017-10-29-curve-considerations_files/figure-html/unnamed-chunk-4-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>At first glance, the FU-Index weight curve appears to be a reasonable weighting, where the correct strategy is likely to play many cheap spells in order to utilize the relatively impactful first few turns. However, this weight curve has the problem that in the later turns there is not enough further downgrading, e.g. a five drop has a high value on turn five but still also on turn six, seven or eight, whereas one-drops and two-drops have hugely diminishing impact. Moreover, since these weights are relatively stable after turn eight or nine, this does not reflect that it’s increasingly unlikely to actually reach any later turns. Thus, the actually correct strategy according to the FU-Index is to play a lot of high drops with a low land count in order to maximize the somewhat overvalued late game.</p>
+</div>
+<div id="discount-index" class="section level4">
+<h4>Discount-Index</h4>
+<p>In economics one often uses <a href="https://en.wikipedia.org/wiki/Discounting">discounting</a> as a tool to adjust for the temporal delay of future incomes and outcomes. When discounting, the value of future payoffs is decreased by a certain discount factor for each time unit the payoff is delayed. Applying this concept to curve evaluation means that the value of one mana spent decreases each turn by the same factor <span class="math">\(d&lt;1\)</span>, since the payoff you get from the mana is delayed correspondingly. This suggests the <em>Discount-Index</em> (<em>D-Index</em>) with weights <span class="math">\(w_1 = 1\)</span>, <span class="math">\(w_2 = d\)</span>, <span class="math">\(w_3 = d^2\)</span>, and so on. For a discount factor of <span class="math">\(d = 0.8\)</span> the respective weight curve is given below.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="/post/2017-10-29-curve-considerations_files/figure-html/unnamed-chunk-5-1.png" alt="Weight curve of the D-Index using a discount factor of 0.8." width="576" />
+<p class="caption">
+Figure 3: Weight curve of the D-Index using a discount factor of 0.8.
+</p>
+</div>
+<p>The D-Index weight curve looks very similar to that of the FU-Index, but there are some significant differences. First of all, the highest impact value of one mana is also given within the first turn. However, the relative loss of impact with each turn is constant over all turns, meaning that the relative difference between turns one and two is the same as between turns eight and nine. In contrast, the FU-Index suggested a rather big loss of impact within the first few turn, but a low impact decrease in the later turns. Thus, the D-Index actually somewhat captures both dynamics: i.e. (1) the decreasing impact of spells with each passed turn in the early game, but also (2) a constant chance that the game ends for any given turn in the late game, which motivates the steady relative decrease of the later turn weights.</p>
+<p>Moreover, the D-Index is well scalable through its discount factor <span class="math">\(d\)</span>. A higher discount factor reflects slow discounting, which represents a small loss of mana impact over the turns combined with on average longer games. On the other and, low discount factors stand for short games with a large relative decrease of mana impact with each turn. Thus, by scaling the discount factor of the D-Index, one can easily control for which environment or format a given executed curve should be evaluated, since different indices actually imply different priorities in assessing the value of an executed curves. Overall, this makes the D-Index very suitable for curve evaluation.</p>
+</div>
+</div>
+<div id="the-curve-evaluator" class="section level2">
+<h2>The Curve Evaluator</h2>
+<p>Let’s do a quick recap. We looked at an algorithm, that for any given decklist in terms of a mana curve can calculate this deck’s average executed curve. Additionally, we looked at different ways in the form of index functions to evaluate such a mean executed curve. Unfortunately, the actual computation of especially the first part is rather tedious. I don’t want anyone to waste so much pencil and paper and since you probably have to do laundry anyway I’d like to present the <strong>Curve Evaluator</strong> that does all this work for you (the computations, not the laundry):</p>
+<p><strong>[<a href="https://mtganalyze.shinyapps.io/curveevaluator/" class="uri">https://mtganalyze.shinyapps.io/curveevaluator/</a>]</strong></p>
+<p>The Curve Evaluator takes any 40 card limited deck with a mana curve up to a maximum mana cost of eight and calculates <strong>1)</strong> the respective mean executed curve and <strong>2)</strong> evaluates this according to the Discount-Index presented above. As there is not a single best D-index the Curve Evaluator applies the D-Index using six different discount factors: 0.55, 0.6, 0.65, 0.7, 0.75, and 0.8. This provides a range for assessing curves within the fastest of the fast limited formats (looking at you, <em>Zendikar</em>) or within the slow and grindy ones (<em><a href="https://magic.wizards.com/en/articles/archive/ways-play/how-chaos-draft-2016-02-25">Chaos Draft</a> Hype!!!</em>). Taking the <em>Wall of Mana</em> example from above, this is the resulting curve evaluation:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="../curveevaluation/wallofmanacurveeval.png" alt="Curve evaluation scores of the &quot;wall of mana&quot;"  />
+<p class="caption">
+Figure 4: Curve evaluation scores of the “wall of mana”
+</p>
+</div>
+<p>As you can see, the curve evaluation does not provide the raw numbers from the different Discount-indices. Instead these results are transformed onto a zero-to-ten scale to be better interpretable, since the raw numbers don’t say much without further knowledge on the potentially optimal index results. To derive these easy to grasp and fancy looking zero-to-ten scales I computed for each underlying Discount-Index the best possible deck that produces an optimal result. (This will be the topic of my next post. SPOILER ALERT: there will be optimal mana curves!) Then, for any mana curve I put the corresponding index result in relation to the optimal result in order to compute a score between zero and ten. Thus, only the deck(s) which maximize a certain D-index reach a ten on the respective score.</p>
+<div class="technical">
+<h4>Mana Curve Evaluation Scores</h4>
+<p>Let <span class="math">\(\mathbf{x}=(x_1, \ldots, x_n)\)</span> be a decklist, where again <span class="math">\(x_i\)</span> denotes the number of cards with converted mana cost <span class="math">\(i\)</span>, and let <span class="math">\(\mathbf{\bar{y}}(\mathbf{x})\)</span> be the deck’s mean executed curve. Thus, for any index function <span class="math">\(\mathcal{I}\)</span> we can define the index of <span class="math">\(\mathcal{I}(\mathbf{x})\)</span> as the index of the deck’s mean executed curve <span class="math">\(\mathcal{I}(\mathbf{\bar{y}}(\mathbf{x}))\)</span>. Let <span class="math">\(\mathbf{x}^*\)</span> be the decklist that maximises the index <span class="math">\(\mathcal{I}\)</span> over all possible decklists. Thus, the best optimal index value is given by <span class="math">\(\mathcal{I}(\mathbf{x}^*)\)</span>.</p>
+Let <span class="math">\(\mathcal{S}\)</span> denote the zero-to-ten score associated with the index <span class="math">\(\mathcal{I}\)</span>. For any decklist <span class="math">\(\mathbf{x}\)</span> this score is computed by <span class="math">\[ \mathcal{S}(\mathbf{x}) = 10 \cdot  \left( \frac{\mathcal{I}(\mathbf{x})}{\mathcal{I}(\mathbf{x}^*)} \right)^c,\]</span> i.e. as ten times the fraction of the index of deck <span class="math">\(\mathbf{x}\)</span> divided by the best possible index result. I also applied an additional power operation within the score function <span class="math">\(\mathcal{S}\)</span>, since I found a simple linear score didn’t provide enough penalization. For instance, a deck that spents only 70% as much mana as the optimal deck would still reach a score of 7.0, which to me is a rather good score given the actually bad performance of the deck. Thus, by introducing the power parameter <span class="math">\(c &gt; 1\)</span>, the score is better able to penalize differences from the optimal value. For the purposes of the app I chose <span class="math">\(c = \pi\)</span>, because it looks very scientific.
+</div>
+<p>One way to utilize the curve evaluator within a booster draft is to build a deck that aims to maximize one of the given scores. Which score to target is a question of the speed of the environment and the overall strategy of your deck. The more aggressive the format and your strategy, the more you should look at the “FAST”-Scores, i.e. the left bars of the chart. Personally, I have so far no practical experiences with the curve evaluator, but I am curious to find out whether it can provide tiebreaker insight for single card decisions.</p>
+</div>
+<div id="end-of-turn" class="section level2">
+<h2>End of turn</h2>
+<p>My main goal for this post was to provide tools to analyze a given mana curve, using computer simulation and index summaries. Especially the choice of a suitable index measure for eventual curve evaluation is highly subjective, and I am interested in what you think is a proper weighting of the individual turns in a limited game. On this regard but also with other goals in mind, there are many possibilities to build up on the here presented tools, e.g.:</p>
+<ul>
+<li><p>With data on the game length distribution of a specific limited format, it could be possible to derive an index that directly accounts for the probability to reach any given turn. This would enable something like the “expected amount of mana spent per game”-Index.</p></li>
+<li><p>Accouting also for mana color would enhance the deck evaluation, e.g. by assessing single card inclusions not only with respect to mana cost but also color requirements. Moreover, it would allow to determine the optimal land distribution for any given deck.</p></li>
+<li><p>The impact of indirect effects such as a <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=384079">Divination</a> is not yet covered by the executed curve simulator. By adding such a component one could analyze in which cases it is worthwhile to include such an effect in a deck and what are the consequences for building the remaining deck. For instance, do you actually play fewer or more lands in a deck with four Divinations?</p></li>
+</ul>
+<p>If you have any further ideas or other comments on this topic, please let me no. Until then, my next post will deal with optimal decks regarding the here presented evaluation measures and how to find these decks.</p>
+</div>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://mtganalyze.github.io/post/extract_value/" data-toggle="tooltip" data-placement="top" title="Extracted Value">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mtganalyze" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:mtganalyze@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mtganalyze" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mtganalyze" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Felix Weidemann
+                      
+          
+          
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://mtganalyze.github.io">MTGANALYZE</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.26</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://mtganalyze.github.io/js/main.js"></script>
+<script src="https://mtganalyze.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://mtganalyze.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+

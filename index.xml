@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
-    <lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curve Considerations</title>
+      <link>https://mtganalyze.github.io/post/curve_considerations/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
+      <guid>https://mtganalyze.github.io/post/curve_considerations/</guid>
+      <description>“What is the most important concept that Limited players should strive to understand?”.
+Ben Stark: “Not being too fancy. Most games are won or lost by hitting your mana curve.”
+In his Limited Information column Marshall Sutcliff once interviewed Ben Stark on limited advice. This particular piece was dubbed “THE TRUTH” and Ben Stark was spitting it. As one of his main messages Ben was pointing out the importance of having a mana curve.</description>
+    </item>
     
     <item>
       <title>Extracted Value</title>
@@ -46,8 +57,7 @@
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
       <guid>https://mtganalyze.github.io/page/about/</guid>
       <description>Magic: the Gathering is a game bigger than its box. With over 10,000 individual cards Magic offers endless possibilities to play.
-Using mathematical and statistical tools I try to find analytical solutions for imho interesting quantitative problems in and around the game. This blog won&amp;rsquo;t make you a better player but it will show you underappreciated puzzles within the world of Magic.
-This blog was created using the R package blogdown package.</description>
+Using mathematical and statistical tools I try to find analytical solutions for imho interesting quantitative problems in and around the game. This blog won&amp;rsquo;t make you a better player but it will show you underappreciated puzzles within the world of Magic. You can find out more about me in my introductory post.</description>
     </item>
     
   </channel>

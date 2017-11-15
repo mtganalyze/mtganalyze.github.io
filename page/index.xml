@@ -18,8 +18,7 @@
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
       <guid>https://mtganalyze.github.io/page/about/</guid>
       <description>Magic: the Gathering is a game bigger than its box. With over 10,000 individual cards Magic offers endless possibilities to play.
-Using mathematical and statistical tools I try to find analytical solutions for imho interesting quantitative problems in and around the game. This blog won&amp;rsquo;t make you a better player but it will show you underappreciated puzzles within the world of Magic.
-This blog was created using the R package blogdown package.</description>
+Using mathematical and statistical tools I try to find analytical solutions for imho interesting quantitative problems in and around the game. This blog won&amp;rsquo;t make you a better player but it will show you underappreciated puzzles within the world of Magic. You can find out more about me in my introductory post.</description>
     </item>
     
   </channel>

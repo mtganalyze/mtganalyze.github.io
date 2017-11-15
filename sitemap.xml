@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mtganalyze.github.io/post/curve_considerations/</loc>
+    <lastmod>2017-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mtganalyze.github.io/post/extract_value/</loc>
     <lastmod>2017-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -28,7 +33,7 @@
   
   <url>
     <loc>https://mtganalyze.github.io/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -39,7 +44,7 @@
   
   <url>
     <loc>https://mtganalyze.github.io/post/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
