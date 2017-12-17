@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
-    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curve Considerations Continued</title>
+      <link>https://mtganalyze.github.io/post/curve_considerations_continued/</link>
+      <pubDate>Sun, 17 Dec 2017 00:00:00 +0000</pubDate>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
+      <guid>https://mtganalyze.github.io/post/curve_considerations_continued/</guid>
+      <description>Today you can follow me on an expedition. After having rolled out the treasure map in my last post we will now take up the quest. Our target is nothing less than the Holy Grail of Limited Magic:
+Today we search for the optimal mana curve of a limited deck.
+Figure 1: Copyright owned by Wizards of the CoastJust recently I presented a rather convoluted way to assess the strength of any given mana curve.</description>
+    </item>
     
     <item>
       <title>Curve Considerations</title>
