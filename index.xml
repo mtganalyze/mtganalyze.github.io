@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
-    <lastBuildDate>Sun, 17 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mtganalyze.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Concluding Considerations Concerning Curves</title>
+      <link>https://mtganalyze.github.io/post/concluding_curve-considerations/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
+      <guid>https://mtganalyze.github.io/post/concluding_curve-considerations/</guid>
+      <description>Drawing the card for my turn is the most exciting feeling I can get when playing Magic. Sometimes within the blink of an eye, the revelation of the top card of my library can turn my well-crafted game plan on its head or even decide the whole game. Also, I just like to hold stuff in my hand. Many players feel similarly which is why card draw belongs to one the most favorite types of effects in limited Magic.</description>
+    </item>
     
     <item>
       <title>Curve Considerations Continued</title>
@@ -20,7 +29,7 @@
       <guid>https://mtganalyze.github.io/post/curve_considerations_continued/</guid>
       <description>Today you can follow me on an expedition. After having rolled out the treasure map in my last post we will now take up the quest. Our target is nothing less than the Holy Grail of Limited Magic:
 Today we search for the optimal mana curve of a limited deck.
-Figure 1: Copyright owned by Wizards of the CoastJust recently I presented a rather convoluted way to assess the strength of any given mana curve.</description>
+Just recently I presented a rather convoluted way to assess the strength of any given mana curve. We thus derived a mapping from a deck’s mana curve onto the deck’s power.</description>
     </item>
     
     <item>

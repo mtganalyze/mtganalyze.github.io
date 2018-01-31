@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Concluding Considerations Concerning Curves</title>
+  <meta property="og:title" content="Concluding Considerations Concerning Curves" />
+  <meta name="twitter:title" content="Concluding Considerations Concerning Curves" />
+  <meta name="description" content="Drawing the card for my turn is the most exciting feeling I can get when playing Magic. Sometimes within the blink of an eye, the revelation of the top card of my library can turn my well-crafted game plan on its head or even decide the whole game. Also, I just like to hold stuff in my hand. Many players feel similarly which is why card draw belongs to one the most favorite types of effects in limited Magic.">
+  <meta property="og:description" content="Drawing the card for my turn is the most exciting feeling I can get when playing Magic. Sometimes within the blink of an eye, the revelation of the top card of my library can turn my well-crafted game plan on its head or even decide the whole game. Also, I just like to hold stuff in my hand. Many players feel similarly which is why card draw belongs to one the most favorite types of effects in limited Magic.">
+  <meta name="twitter:description" content="Drawing the card for my turn is the most exciting feeling I can get when playing Magic. Sometimes within the blink of an eye, the revelation of the top card of my library can turn my well-crafted game …">
+  <meta name="author" content="Felix Weidemann"/>
+  <link href='https://mtganalyze.github.io/img/icon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <meta name="twitter:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mtganalyze" />
+  <meta name="twitter:creator" content="@mtganalyze" />
+  <meta property="og:url" content="https://mtganalyze.github.io/post/concluding_curve-considerations/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MTGANALYZE" />
+
+  <meta name="generator" content="Hugo 0.26" />
+  <link rel="canonical" href="https://mtganalyze.github.io/post/concluding_curve-considerations/" />
+  <link rel="alternate" href="https://mtganalyze.github.io/index.xml" type="application/rss+xml" title="MTGANALYZE">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://mtganalyze.github.io/css/highlight.min.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mtganalyze.github.io">MTGANALYZE</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="MTGANALYZE" href="https://mtganalyze.github.io">
+            <img class="avatar-img" src="https://mtganalyze.github.io/img/theorist.jpg" alt="MTGANALYZE" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Concluding Considerations Concerning Curves</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on January 31, 2018
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Drawing the card for my turn is the most exciting feeling I can get when playing <em>Magic</em>. Sometimes within the blink of an eye, the revelation of the top card of my library can turn my well-crafted game plan on its head or even decide the whole game. Also, I just like to hold stuff in my hand. Many players feel similarly which is why card draw belongs to one the most favorite types of effects in limited Magic.</p>
+<p>However, there is one huge downside to pure card draw spells and that is the loss of tempo you suffer from playing them. What this means is that, although you spent mana on casting a (draw) spell, you don’t affect the board in a meaningful way, which easily gets you on the back foot in the early game. Another type of effect that shares this characteristic – sacrificing direct game impact in order to invest for bigger or more effects in the future – is Mana ramp.</p>
+<p>Since in the last two posts we were talking about mana curves a lot, I want to pick up this topic once more by taking a closer look on such alternative game effects (<em>also I came up with this catchy title</em>). Today’s question is:</p>
+<p><strong>How does the optimal mana curve adjust to the inclusion of up to three <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=384079">Divinations</a> or <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=25880">Star Compasses</a>?</strong></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="../images/divination_compass.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 1: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>In other words, how do card draw and mana ramp spells affect the rest of your mana curve and can they actually improve the performance of your deck? In order to answer this question we concentrate on two specific examples, namely the benchmarks <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=384079">Divination</a> and <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=25880">Star Compass</a>. To do so, we extend and apply our methodology for evalating mana curves as presented in earlier posts. The results coming from this analysis will give you some guidance on how to adapt your mana curve in case you play any card draw or mana ramp in your next draft deck.</p>
+<div id="return-to-curve-evaluation" class="section level2">
+<h2>Return to Curve Evaluation</h2>
+<p>Within the two previous posts I proposed <a href="https://mtganalyze.github.io/post/curve_considerations/">a simulation based method</a> in order to evaluate any given mana curve. The approach was based on computing the mean executed curve and grading this curve using some index measure accouting for the relative importance of the earlier turns. Afterwards we applied some customized random search optimization algorithm to <a href="https://mtganalyze.github.io/post/curve_considerations_continued/">find the optimal mana curve</a> for a handful of such index measures representing various assumption on the underlying pace of the game (i.e. from very fast to slow). If you haven’t read those posts yet you might have problems to follow the here presented analysis.</p>
+<p>One of the biggest weakness of the previous evaluation model was the assumption that all spells within a deck had to be action (or business) spells, in the sense that each spell had to have an immediate game impact, where the magnitude of the impact was approximated through the converted mana cost of the spell. However, an actual Magic deck most often also includes spells granting some indirect effect without an immediate impact on the board, such as mana ramp or card draw. The former version of the algorithm was not able to account for such effects within the analysis.</p>
+<p>Today we want to extend the curve evaluation method by also including card draw spells and/or ramp spells within the executed curve simulation. To do so, we once more have to enter the machine room and get our hands a little dirty. This time I will not present the technical mess, but rather explain how the algorithm for simulating the executed curve needs to be adjusted (check out the <a href="https://mtganalyze.github.io/post/curve_considerations/">‘Mean Executed Curve’</a> Algorithm for the original version).</p>
+<div id="card-draw-effects" class="section level4">
+<h4>Card Draw Effects</h4>
+<p>Within the curve execution algoritm card draw spells are incorporated as follows. During each turn, the algorithm first plays lands and business spells from the hand if possible. Afterwards, the algorithm checks, whether there is a card draw spell in the hand. Then this card draw spell gets played if there is enough mana available to pay for its cost. The appropriate number of cards are thus added to the hand and then there follows another rounds of playing lands (if not done yet) and spells within the same turn. Thus, the algorithm is capable of utilising the freshly drawn cards within the same turn subject to mana requirements.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="../images/riches.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 2: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>The biggest difference to action spells is that mana spent for card draw effects is not counted towards the executed curve, since the three mana spent on a <em>Divination</em> is not part of your board affecting curve.</p>
+<p>Also, strategically the algorithm is pretty dumb in the sense that it always prioritizes action over card draw. It is not able to deviate from this rule if, for instance, it might be better to prioritize card draw in order to hit your land drop for the turn.</p>
+</div>
+<div id="mana-ramp-effects" class="section level4">
+<h4>Mana Ramp Effects</h4>
+<p>The strategy behind integrating ramp spells into the algorithm is a little more complex. Whether to cast a ramp spell (given there is one in the hand and sufficient mana) is decided after playing a land but before playing any action spells. If one of the following criteria is met, the ramp spell will be cast:</p>
+<ul>
+<li><p>there are no action spells in hand</p></li>
+<li><p>the most expensive action spell in hand costs more than there is mana available</p></li>
+<li><p>the ramp spell <em>and</em> all action spells in hand can be cast by the available mana in this turn</p></li>
+</ul>
+<p>The idea behind this strategy is to generally prioritize ramp spells over action spells, since you want to ramp into your big stuff. However, one still wants to avoid scenarios in which playing a ramp spell is solely delaying the in-hand action while providing no real benefit. The above condidtions do exactly that.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="../images/manabloom.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 3: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>Like draw spells, ramp spells are not counted towards the executed curve but add a virtual land to the board. Thus, their benefit is the potential mana advantage in the subsequent turns, which might compensate for the gap in the executed curve.</p>
+</div>
+</div>
+<div id="evolving-optimal-mana-curves" class="section level2">
+<h2>Evolving Optimal Mana Curves</h2>
+<p>To answer this post’s main question on <em>Divinations</em> and <em>Star Compasses</em> I ran the following analyses. Again I computed the optimal mana curve using the method described in my <a href="https://mtganalyze.github.io/post/curve_considerations_continued/">previous post</a>, but this time I told the seach algorithm to fix the number of <em>Divinations</em> or <em>Star Compasses</em> at either zero, one, two or three. Hence, for each type of effect we get four decklists to compare, where each deck’s curve is optimized given the preset number of, e.g., <em>Star Compasses</em>. Moreover, I performed this analysis for the Discount-Index measures given a discount factor of either 0.7 or 0.8 which represent a relatively fast and slow limited format (like Sealed), respectively.</p>
+<p>For each optimal deck I computed the following statistics: the actual mana curve and the total number of action spells, the land count, the mean converted mana costs of all action spells, and the curve index representing the overall strength of the given mana curve.</p>
+<div id="divination" class="section level4">
+<h4>Divination</h4>
+<p>Let’s take a look at the results regarding <em>Divination</em>, which of course represents any <em>three mana - draw two</em> spell. Below are the optimal curves based on the Index using a discount factor of <span class="math">\(0.7\)</span>, i.e. a rather fast limited environment.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="../curveevaluation/divineeffects07.png" alt="Optimal mana curves given up to three Divinations in the deck. The Divinations are marked blue at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.7"  />
+<p class="caption">
+Figure 4: Optimal mana curves given up to three Divinations in the deck. The Divinations are marked blue at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.7
+</p>
+</div>
+<p>As a reference the optimal mana curve using action spells only (see <a href="https://mtganalyze.github.io/post/curve_considerations_continued/">previous post</a>) is displayed in the top row. A few things are of note here. Firstly the corresponding optimal curve index decreases for each <em>Divination</em> added to the deck list, which means that ideally you would play no <em>Divinations</em> at all given the pace of the format. Secondly, the average converted mana cost of your action spells increase by adding <em>Divinations</em> to your deck. Hence, its best to also include slightly more expensive alongside the card draw spells. Thirdly, the optimal land count remains constant at 16 lands.</p>
+<p>Below are the results with respect to a discount factor of <span class="math">\(0.8\)</span> representing a slower limited format.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="../curveevaluation/divineeffects08.png" alt="Optimal mana curves given up to three Divinations in the deck. The Divinations are marked blue at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.8"  />
+<p class="caption">
+Figure 5: Optimal mana curves given up to three Divinations in the deck. The Divinations are marked blue at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.8
+</p>
+</div>
+<p>The impact of the <em>Divination</em> on the optimal curve is very similar for the slower environment, although the effect is even more pronounced. Most importantly, the optimal deck plays significantly more expensive spells, with a mean CMC (among actions spells only) of 5.16 in a deck with three <em>Divinations</em> vs. 4.17 in a deck without <em>Divinations</em>. Moreover, all the optimal decks including to at least one card draw spell play an additional land. In contrast to the faster environment, however, here a deck actually performs better the more <em>Divinations</em> it plays as indicated by the achieved index results.</p>
+<p>I was actually surprised by some of these results. I guess it was clear, that the performance of card draw spells improves within slower formats. However, personally I expected that card draw effects would allow/require to also play more cheap spells in order make up for the tempo loss, but the opposite seems to be the case especially within a slow environment. In fact, the optimal deck around three <em>Divinations</em> appears to rely on a whole different strategy, where instead of a usual curve out the deck focusses on reliably hitting high drops in the late game, which motivates the higher curve and land count. I’ve never thought of basically ignoring the early turns in order to really make sure to win the long game, but this might actually be a viable strategy that is worth to explore.</p>
+</div>
+<div id="star-compass" class="section level4">
+<h4>Star Compass</h4>
+<p>Let’s get to the results regarding <em>Star Compass</em>, here repesenting any two mana ramp effect. First for the fast environment:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="../curveevaluation/rampeffects07.png" alt="Optimal mana curves given up to three Star Compasses in the deck. The Star Compasses are marked green at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.7"  />
+<p class="caption">
+Figure 6: Optimal mana curves given up to three Star Compasses in the deck. The Star Compasses are marked green at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.7
+</p>
+</div>
+<p>Again the land count remains equal over all four decks, which is somewhat surprising as the land count does not compensate for the additional mana sources provied by the ramp spells. Accordingly the optimal mean converted mana costs of the action spells increase considerably due to the ramp effects, i.e. by 0.5 mana in the deck with three Star Compasses compared to none. Still, the curve index gets worse for the decks which play more ramp spells. Thus, ramp appears to be a poor strategy within faster formats.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="../curveevaluation/rampeffects08.png" alt="Optimal mana curves given up to three Star Compasses in the deck. The Star Compasses are marked green at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.8"  />
+<p class="caption">
+Figure 7: Optimal mana curves given up to three Star Compasses in the deck. The Star Compasses are marked green at the appropriate spot of the curve. Curves are optimized with respect to a discount factor 0.8
+</p>
+</div>
+<p>Above are the result for the slow environment. The curve evolution is very similar to that from the fast format. Of note is the difference between the two optimal decks using either none or one <em>Star Compass</em>, which again suggest some kind of strategy shift. The deck using one ramp spell plays an additional land and in return cuts all two drops and heavily increases the average mana costs in order to max out on the late game performance. The other ramp decks using two or three <em>Star Compasses</em> are then very similar to that deck. However, the curve index is very similar for all of these decks, which means that even in slower formats a dedicated ramp deck does not provide a sufficient power boost.</p>
+<p>At least this last point left me puzzled as I always thought that durdly ramp decks would play out very well within slow-paced games. After some rethinking I concluded that mana acceleration is most efficient in faster formats as it can enable a very powerful mid-game to outperform usual <em>“curve out”</em>-decks. However, this is also not correct given our results. Then I figured that there is an inherent flaw in ramp strategies since they <em>give up tempo</em> (skipping board affecting spells in the early game) to <em>gain tempo</em> (by casting more expensive spells in the mid to late game). This doesn’t even <em>sound</em> like a smart plan. Thus, from a pure curve perspective a generic ramp strategy is not what you should aim for when sitting down at your draft table.</p>
+</div>
+</div>
+<div id="reminder-text" class="section level2">
+<h2>Reminder Text</h2>
+<p>Of course the whole underlying model to evaluate curves is based on a few assumptions and simplifications. Most importantly, the impact of each spell is just taken to be given by its converted mana cost, i.e. all X-drops have equal impact. Thus, the power level of each deck is entirely flat, with the only variability in power level being given through the different converted mana costs of the spells, since for instance a two-drop has twice the impact compared to a one-drop. Secondly, the curve evaluation does not account for mana requirements, all spells are virtually colorless in the simulation.</p>
+<p>Thus, the curve evaluation method somewhat undervalues ramp and draw spells, as it is not able to account for some of their additional advantages. In fact, both types of spells are very valuable in decks with high color demands or a heterogeneous power level of its spells. Ramp spells often either simultaneously fix mana or are crucial if the game plan is to resolve expensive bombs to win the game. For instance, if your seven-drop of choice is <a href="link">Karn Liberated</a> rather than <a href="link">Hexplate Golem</a> you are much more happy to play a ramp effect over some board-impacting two-drop. The same is true for draw spells, which fulfill important digging roles in either multicolored or bomb-reliant decks. Thus, the true benefits of ramp and draw spells are often not curve-related but are rather due to other characteristics or components of the deck.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<img src="../images/karn_golem.jpg" alt="Copyright owned by Wizards of the Coast"  />
+<p class="caption">
+Figure 8: Copyright owned by Wizards of the Coast
+</p>
+</div>
+<p>Lastly, while drafting one rarely has the chance to shape the mana curve at one’s convenience. In that regard, one important take-away is in which situations you should prioritize picking ramp or draw effects in order to make up for high curve. Vice versa, the here presented results also suggest that, especially in faster formats, picking up two early <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=rampant%20growth">Rampant Growths</a> does not give you any justification to go nuts and only pick the most expensive spells for the rest of the draft.</p>
+</div>
+<div id="end-of-turn" class="section level2">
+<h2>End of turn</h2>
+<p>With this post I conclude my deep dive into mana curves. My personal lesson from this chapter is to try out the “all-in on the late game” plan next time i find myself in the middle of a draft train wreck. Hopefully, that will be very soon.</p>
+<p>Next time, we will tackle a new topic which will be much more draft-specific and is an underappreciated theory in my opinion: Signal Detection.</p>
+</div>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://mtganalyze.github.io/post/curve_considerations_continued/" data-toggle="tooltip" data-placement="top" title="Curve Considerations Continued">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mtganalyze" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:mtganalyze@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mtganalyze" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mtganalyze" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Felix Weidemann
+                      
+          
+          
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://mtganalyze.github.io">MTGANALYZE</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.26</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://mtganalyze.github.io/js/main.js"></script>
+<script src="https://mtganalyze.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://mtganalyze.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+
