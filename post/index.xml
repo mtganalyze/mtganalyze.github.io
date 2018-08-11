@@ -2,31 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on MTGANALYZE</title>
-    <link>https://mtganalyze.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
-    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mtganalyze.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Picks and Preferences</title>
+      <link>/post/picks-and-preferences/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
+      <guid>/post/picks-and-preferences/</guid>
+      <description>In my introductory post I said that I am a limited player by heart. To me Booster Draft is an art form. Drafting is relatively easy learn to a degree of being able to assemble functional decks. However, it is nearly impossible to become a complete master. Beyond the simple concept of “Take up the booster – Pick a card – Pass the remaining cards to the left.” , there are so many hidden dynamics to explore: Which colors are your neighbours drafting?</description>
+    </item>
+    
+    <item>
       <title>Concluding Considerations Concerning Curves</title>
-      <link>https://mtganalyze.github.io/post/concluding_curve-considerations/</link>
+      <link>/post/concluding_curve-considerations/</link>
       <pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/post/concluding_curve-considerations/</guid>
+      <guid>/post/concluding_curve-considerations/</guid>
       <description>Drawing the card for my turn is the most exciting feeling I can get when playing Magic. Sometimes within the blink of an eye, the revelation of the top card of my library can turn my well-crafted game plan on its head or even decide the whole game. Also, I just like to hold stuff in my hand. Many players feel similarly which is why card draw belongs to one the most favorite types of effects in limited Magic.</description>
     </item>
     
     <item>
       <title>Curve Considerations Continued</title>
-      <link>https://mtganalyze.github.io/post/curve_considerations_continued/</link>
+      <link>/post/curve_considerations_continued/</link>
       <pubDate>Sun, 17 Dec 2017 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/post/curve_considerations_continued/</guid>
+      <guid>/post/curve_considerations_continued/</guid>
       <description>Today you can follow me on an expedition. After having rolled out the treasure map in my last post we will now take up the quest. Our target is nothing less than the Holy Grail of Limited Magic:
 Today we search for the optimal mana curve of a limited deck.
 Just recently I presented a rather convoluted way to assess the strength of any given mana curve. We thus derived a mapping from a deck’s mana curve onto the deck’s power.</description>
@@ -34,10 +43,10 @@ Just recently I presented a rather convoluted way to assess the strength of any 
     
     <item>
       <title>Curve Considerations</title>
-      <link>https://mtganalyze.github.io/post/curve_considerations/</link>
+      <link>/post/curve_considerations/</link>
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/post/curve_considerations/</guid>
+      <guid>/post/curve_considerations/</guid>
       <description>“What is the most important concept that Limited players should strive to understand?”.
 Ben Stark: “Not being too fancy. Most games are won or lost by hitting your mana curve.”
 In his Limited Information column Marshall Sutcliff once interviewed Ben Stark on limited advice. This particular piece was dubbed “THE TRUTH” and Ben Stark was spitting it. As one of his main messages Ben was pointing out the importance of having a mana curve.</description>
@@ -45,28 +54,28 @@ In his Limited Information column Marshall Sutcliff once interviewed Ben Stark o
     
     <item>
       <title>Extracted Value</title>
-      <link>https://mtganalyze.github.io/post/extract_value/</link>
+      <link>/post/extract_value/</link>
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/post/extract_value/</guid>
+      <guid>/post/extract_value/</guid>
       <description>Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job as an arctic explorer you rarely find time to play any bigger Magic events these days. It’s Friday and since you have no byes for the GP you are eager to play some trials. Surprisingly, Wizards Organized Play restructered the usual side event schedule.</description>
     </item>
     
     <item>
       <title>Skills and Scores</title>
-      <link>https://mtganalyze.github.io/post/skills_and_scores/</link>
+      <link>/post/skills_and_scores/</link>
       <pubDate>Mon, 11 Sep 2017 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/post/skills_and_scores/</guid>
+      <guid>/post/skills_and_scores/</guid>
       <description>My brother once told me: “Playing day 2 of a GP is like playing on the Pro Tour – probably even harder”. Neither of us had yet played at the Pro Tour nor made a GP day 2 at that time, but in place of experience we at least had deep respect for the GP day 2 player field. However, regardless of my brother’s statement being right or wrong (it was wrong), the underlying idea is interesting: It must be only the finest players, who are capable of winning at least seven of nine rounds of exhausting tournament Magic.</description>
     </item>
     
     <item>
       <title>Who am I?</title>
-      <link>https://mtganalyze.github.io/post/who-am-i/</link>
+      <link>/post/who-am-i/</link>
       <pubDate>Sat, 19 Aug 2017 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/post/who-am-i/</guid>
+      <guid>/post/who-am-i/</guid>
       <description>It’s the sixth week of my paternity leave. I recently became a twin dad in addition to being just a dad. Being off work and spending hours changing diapers and holding a baby or two offers a lot of time to think about stuff. I am a passionate Magic player and I haven’t been touching cards in the last few weeks, thus I found myself to be thinking about Magic a lot.</description>
     </item>
     

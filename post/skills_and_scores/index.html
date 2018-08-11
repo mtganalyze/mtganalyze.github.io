@@ -12,27 +12,27 @@
   <meta property="og:description" content="My brother once told me: “Playing day 2 of a GP is like playing on the Pro Tour – probably even harder”. Neither of us had yet played at the Pro Tour nor made a GP day 2 at that time, but in place of experience we at least had deep respect for the GP day 2 player field. However, regardless of my brother’s statement being right or wrong (it was wrong), the underlying idea is interesting: It must be only the finest players, who are capable of winning at least seven of nine rounds of exhausting tournament Magic.">
   <meta name="twitter:description" content="My brother once told me: “Playing day 2 of a GP is like playing on the Pro Tour – probably even harder”. Neither of us had yet played at the Pro Tour nor made a GP day 2 at that time, but in place of …">
   <meta name="author" content="Felix Weidemann"/>
-  <link href='https://mtganalyze.github.io/img/icon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
-  <meta name="twitter:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <link href='/img/icon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/theorist.jpg" />
+  <meta name="twitter:image" content="/img/theorist.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@mtganalyze" />
   <meta name="twitter:creator" content="@mtganalyze" />
-  <meta property="og:url" content="https://mtganalyze.github.io/post/skills_and_scores/" />
+  <meta property="og:url" content="/post/skills_and_scores/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="MTGANALYZE" />
 
   <meta name="generator" content="Hugo 0.26" />
-  <link rel="canonical" href="https://mtganalyze.github.io/post/skills_and_scores/" />
-  <link rel="alternate" href="https://mtganalyze.github.io/index.xml" type="application/rss+xml" title="MTGANALYZE">
+  <link rel="canonical" href="/post/skills_and_scores/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="MTGANALYZE">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/highlight.min.css" />
+  <link rel="stylesheet" href="/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" />
 
 
 
@@ -98,7 +98,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://mtganalyze.github.io">MTGANALYZE</a>
+      <a class="navbar-brand" href="/">MTGANALYZE</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -126,8 +126,8 @@
     <div class="avatar-container">
       <div class="avatar-img-border">
         
-          <a title="MTGANALYZE" href="https://mtganalyze.github.io">
-            <img class="avatar-img" src="https://mtganalyze.github.io/img/theorist.jpg" alt="MTGANALYZE" />
+          <a title="MTGANALYZE" href="/">
+            <img class="avatar-img" src="/img/theorist.jpg" alt="MTGANALYZE" />
           </a>
         
       </div>
@@ -193,7 +193,7 @@
 Figure 1: Scene from “The Social Network”
 </p>
 </div>
-<p>The mathematical principle of the rating system itself is rather straightforward. Given a match between players A and B with ratings <span class="math">\(x_A\)</span> and <span class="math">\(x_B\)</span>, respectively, the ELO system models the win probability of player A as <span class="math">\[p_A = \frac{1}{1 + 10^{-(x_A - x_B) / c}},\]</span> where <span class="math">\(c\)</span> is some scaling constant (The DCI used <span class="math">\(c = 400\)</span>, I believe). From a statistical perspective, this corresponds to the predicted success probability from a logistic regression model using the rating difference (scaled through <span class="math">\(c\)</span>) as its only covariable. Given the outcome of the match, player A’s rating increases by <span class="math">\(K \cdot(1-p_A)\)</span> if he wins the match or decreases by <span class="math">\(K\cdot p_A\)</span> if he loses, where <span class="math">\(K\)</span> is some velocity factor. Thus, assuming the ELO predicted win probability is accurate, the expected rating change of player A is <span class="math">\[\mathbb{E} \left[\Delta x_A\right] = p_A \cdot K(1-p_A) + (1-p_A)\cdot(-Kp_A) = 0.\]</span> Otherwise, if player A is underrated, i.e. its actual win probality is larger than <span class="math">\(p_A\)</span>, then the expected rating change is positive. If player A is overrated the expected rating change is negative. Thus, the rating tends to correct itself.</p>
+<p>The mathematical principle of the rating system itself is rather straightforward. Given a match between players A and B with ratings <span class="math inline">\(x_A\)</span> and <span class="math inline">\(x_B\)</span>, respectively, the ELO system models the win probability of player A as <span class="math display">\[p_A = \frac{1}{1 + 10^{-(x_A - x_B) / c}},\]</span> where <span class="math inline">\(c\)</span> is some scaling constant (The DCI used <span class="math inline">\(c = 400\)</span>, I believe). From a statistical perspective, this corresponds to the predicted success probability from a logistic regression model using the rating difference (scaled through <span class="math inline">\(c\)</span>) as its only covariable. Given the outcome of the match, player A’s rating increases by <span class="math inline">\(K \cdot(1-p_A)\)</span> if he wins the match or decreases by <span class="math inline">\(K\cdot p_A\)</span> if he loses, where <span class="math inline">\(K\)</span> is some velocity factor. Thus, assuming the ELO predicted win probability is accurate, the expected rating change of player A is <span class="math display">\[\mathbb{E} \left[\Delta x_A\right] = p_A \cdot K(1-p_A) + (1-p_A)\cdot(-Kp_A) = 0.\]</span> Otherwise, if player A is underrated, i.e. its actual win probality is larger than <span class="math inline">\(p_A\)</span>, then the expected rating change is positive. If player A is overrated the expected rating change is negative. Thus, the rating tends to correct itself.</p>
 <p>The relevant property for us is that ELO provides a predictive model for the outcome of any match between two players. All we need is the “true” ELO rating for both of these players. In fact, for our purposes we are interested in the distribution of the “true” ELO ratings within a GP player field, which will be addressed later.</p>
 <div id="limitations-of-elo" class="section level4">
 <h4>Limitations of ELO</h4>
@@ -214,7 +214,7 @@ Figure 1: Scene from “The Social Network”
 <li><p>The mean player rating at a Grand Prix is 1554 with lower and upper <a href="https://en.wikipedia.org/wiki/Quartile">quartiles</a> of 1472 and 1606, respectively.</p></li>
 <li><p>The mean player rating at a Pro Tour is 1788 with lower and upper quartiles of 1660 and 1918, respectively.</p></li>
 </ul>
-<p>To give a crude interpretation guideline: within MTGELOPROJECT each player starts at a rating of 1500. Thus, the GP player field is already above average. Also they use a scaling factor of <span class="math">\(c= 1136\)</span>, which means that a rating advantage of 200 points is equivalent to a win probability of 60%. Under the assumption of a normally distributed rating within each tournament player field, I used the interquartile range to roughly compute the corresponding standard deviations which led to the following rating distributions:</p>
+<p>To give a crude interpretation guideline: within MTGELOPROJECT each player starts at a rating of 1500. Thus, the GP player field is already above average. Also they use a scaling factor of <span class="math inline">\(c= 1136\)</span>, which means that a rating advantage of 200 points is equivalent to a win probability of 60%. Under the assumption of a normally distributed rating within each tournament player field, I used the interquartile range to roughly compute the corresponding standard deviations which led to the following rating distributions:</p>
 <ul>
 <li><p>At a Grand Prix the rating is normally distributed with mean 1554 and standard deviation 100.</p></li>
 <li><p>At a Pro Tour the rating is normally distributed with mean 1788 and standard deviation 200.</p></li>
@@ -228,16 +228,16 @@ Figure 1: Scene from “The Social Network”
 <div id="simulating-player-fields-by-score-brackets" class="section level2">
 <h2>Simulating player fields by score brackets</h2>
 <p>It’s time to go off. Using (i) the data on the player field rating distribution and (ii) the ELO model to estimate win probabilities based on those ratings we are now ready to simulate a virtual Grand Prix tournament. Based on this simulation we can draw conclusions on how the rating distribution varies by score bracket as the tournament goes on,</p>
-<p>To simulate the tournament, I used the following algorithm which I implemented using <a href="https://www.r-project.org/">R</a>. Here, let <span class="math">\(N\)</span> be the number of tournament players with individual ratings <span class="math">\(x_i\)</span> (<span class="math">\(i=1,\ldots, N\)</span>) drawn independently from a normal distribution with mean 1554 and standard deviation 100 (the GP rating distribution as given above). Let <span class="math">\(r^{(j)}_i\)</span> (<span class="math">\(i=1,\ldots, N\)</span>) denote the number of wins of player <span class="math">\(i\)</span> after round <span class="math">\(j\)</span>. For the sake of definedness we set <span class="math">\(r^{(0)}_i = 0\)</span> for all players. Then we apply the following algorithm:</p>
+<p>To simulate the tournament, I used the following algorithm which I implemented using <a href="https://www.r-project.org/">R</a>. Here, let <span class="math inline">\(N\)</span> be the number of tournament players with individual ratings <span class="math inline">\(x_i\)</span> (<span class="math inline">\(i=1,\ldots, N\)</span>) drawn independently from a normal distribution with mean 1554 and standard deviation 100 (the GP rating distribution as given above). Let <span class="math inline">\(r^{(j)}_i\)</span> (<span class="math inline">\(i=1,\ldots, N\)</span>) denote the number of wins of player <span class="math inline">\(i\)</span> after round <span class="math inline">\(j\)</span>. For the sake of definedness we set <span class="math inline">\(r^{(0)}_i = 0\)</span> for all players. Then we apply the following algorithm:</p>
 <ol style="list-style-type: decimal">
-<li><p>For <span class="math">\(j = 1, \ldots, 9\)</span> repeat the following steps <strong>2)</strong> to <strong>4)</strong>.</p></li>
-<li><p>Sort all players by descending <span class="math">\(r^{(j-1)}_i\)</span> (<em>i.e we sort by score</em>). In case of ties sort randomly within the tie brackets.</p></li>
-<li><p>Based on this sorting order, generate pairings by matching player 1 against player 2, player 3 against player 4, and so on. (<em>This procedure basically produces swiss pairings. For simplicity we chose <span class="math">\(N\)</span> to be an even number.</em>)</p></li>
-<li><p>For each of the <span class="math">\(N/2\)</span> round matches do the following: let’s denote the two participating players by <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</span>. We compute the win probability of player <span class="math">\(i_1\)</span> by applying the ELO formula <span class="math">\(p = (1 + 10^{-(x_{i_1} - x_{i_2}) / c})^{-1}\)</span> with <span class="math">\(c = 1136\)</span>. Draw <span class="math">\(Y \sim\)</span> Bern<span class="math">\((p)\)</span> from a Bernoulli distribution (<em>basically we throw a coin that shows head (Y=1) with probability <span class="math">\(p\)</span> and tails (Y=0) with probability <span class="math">\(1-p\)</span></em>). In case of <span class="math">\(Y=1\)</span> we set <span class="math">\(r^{(j+1)}_{i_1} = r^{(j)}_{i_1} + 1\)</span> and <span class="math">\(r^{(j+1)}_{i_2} = r^{(j)}_{i_2}\)</span> (<em>i.e. player <span class="math">\(i_1\)</span> receives a win</em>). In case of <span class="math">\(Y=0\)</span>, update analogeously such that player <span class="math">\(i_2\)</span> receives the win.</p></li>
-<li><p>Discard all players with <span class="math">\(r^{(9)}_i &lt; 6\)</span>. (<em>We make a cut after nine rounds and continue only with players who received six wins</em>)</p></li>
-<li><p>Using the diminished player field repeat steps <strong>2)</strong> to <strong>4)</strong> for <span class="math">\(j = 9, \ldots, 14\)</span>.</p></li>
+<li><p>For <span class="math inline">\(j = 1, \ldots, 9\)</span> repeat the following steps <strong>2)</strong> to <strong>4)</strong>.</p></li>
+<li><p>Sort all players by descending <span class="math inline">\(r^{(j-1)}_i\)</span> (<em>i.e we sort by score</em>). In case of ties sort randomly within the tie brackets.</p></li>
+<li><p>Based on this sorting order, generate pairings by matching player 1 against player 2, player 3 against player 4, and so on. (<em>This procedure basically produces swiss pairings. For simplicity we chose <span class="math inline">\(N\)</span> to be an even number.</em>)</p></li>
+<li><p>For each of the <span class="math inline">\(N/2\)</span> round matches do the following: let’s denote the two participating players by <span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_2\)</span>. We compute the win probability of player <span class="math inline">\(i_1\)</span> by applying the ELO formula <span class="math inline">\(p = (1 + 10^{-(x_{i_1} - x_{i_2}) / c})^{-1}\)</span> with <span class="math inline">\(c = 1136\)</span>. Draw <span class="math inline">\(Y \sim\)</span> Bern<span class="math inline">\((p)\)</span> from a Bernoulli distribution (<em>basically we throw a coin that shows head (Y=1) with probability <span class="math inline">\(p\)</span> and tails (Y=0) with probability <span class="math inline">\(1-p\)</span></em>). In case of <span class="math inline">\(Y=1\)</span> we set <span class="math inline">\(r^{(j+1)}_{i_1} = r^{(j)}_{i_1} + 1\)</span> and <span class="math inline">\(r^{(j+1)}_{i_2} = r^{(j)}_{i_2}\)</span> (<em>i.e. player <span class="math inline">\(i_1\)</span> receives a win</em>). In case of <span class="math inline">\(Y=0\)</span>, update analogeously such that player <span class="math inline">\(i_2\)</span> receives the win.</p></li>
+<li><p>Discard all players with <span class="math inline">\(r^{(9)}_i &lt; 6\)</span>. (<em>We make a cut after nine rounds and continue only with players who received six wins</em>)</p></li>
+<li><p>Using the diminished player field repeat steps <strong>2)</strong> to <strong>4)</strong> for <span class="math inline">\(j = 9, \ldots, 14\)</span>.</p></li>
 </ol>
-<p>Note that for this Grand Prix simulation we did not update the rating of each player after each round, since we are only interested in the rating as an indicator for each player’s fixed skill level and not in the rating fluctuations themselves. After the dust is settled, our simulated tournament results contain the number of players within each score bracket after each round and more importantly the ratings of these players within the individual brackets. These bracket specific rating distributions provide a clear picture on how your skill level can affect your tournament score. For instance, let’s look at a snap shot after round nine from a simulation with <span class="math">\(N = 10000000\)</span> players.</p>
+<p>Note that for this Grand Prix simulation we did not update the rating of each player after each round, since we are only interested in the rating as an indicator for each player’s fixed skill level and not in the rating fluctuations themselves. After the dust is settled, our simulated tournament results contain the number of players within each score bracket after each round and more importantly the ratings of these players within the individual brackets. These bracket specific rating distributions provide a clear picture on how your skill level can affect your tournament score. For instance, let’s look at a snap shot after round nine from a simulation with <span class="math inline">\(N = 10000000\)</span> players.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="../wpt/r9snap.jpeg" alt="Rating distribution (given as stacked densities) after round nine of a GP stratified by score."  />
 <p class="caption">
@@ -249,14 +249,14 @@ Figure 2: Rating distribution (given as stacked densities) after round nine of a
 <div id="the-win-probability-tree" class="section level2">
 <h2>The win probability tree</h2>
 <p>So far we looked at a model to translate any rating into a win probability against any other opponent rating. Also, due to our simulated tournament based on empirical data we know the players rating distribution within each possible score bracket. By bringing these components together, we are now able to compute the expected win probability of any rated player within a certain score bracket of, e.g., a Grand Prix.</p>
-<p>The notation will get a little technical now. To calculate the expected win probability we need to take a look at the simulated player ratings within a specific score bracket. Based on simulated results from above let’s denote by <span class="math">\[\mathcal{R}^{(j)}_w = \{x_i | r^{(j)}_i = w \}\]</span> the rating sample of those players with exactly <span class="math">\(w\)</span> wins after <span class="math">\(j\)</span> rounds. We denote by <span class="math">\[\bar{r}_w^{(j)} = \text{mean}(\mathcal{R}^{(j)}_w),  \quad \text{and} \quad \sigma_w^{(j)} = \text{Var}(\mathcal{R}^{(j)}_w)\]</span> the emprical mean and variance of this rating sample. The expected win probability on a player with rating <span class="math">\(x\)</span> within the score bracket “<span class="math">\(w\)</span> wins after <span class="math">\(j\)</span> rounds” can then be approximated by <span class="math">\[p_w^{(j)} (x) \approx \left|\mathcal{R}^{(j)}_w\right|^{(-1)} \sum_{y \in \mathcal{R}^{(j)}_w}\frac{1}{1 + 10^{-(x - y)/c}}\]</span> <span class="math">\[\approx
-\int_{\mathbb{R}} \frac{1}{1 + 10^{-(x - y) / c}} \, \varphi(y, \bar{r}_w^{(j)}, \sigma_w^{(j)}) dy,\]</span> where <span class="math">\(\varphi(\cdot, r, \sigma)\)</span> denotes the density of a normal distribution with mean <span class="math">\(r\)</span> and variance <span class="math">\(\sigma\)</span>. This integral is a rather complicated way to write the solution for the following calculations:</p>
+<p>The notation will get a little technical now. To calculate the expected win probability we need to take a look at the simulated player ratings within a specific score bracket. Based on simulated results from above let’s denote by <span class="math display">\[\mathcal{R}^{(j)}_w = \{x_i | r^{(j)}_i = w \}\]</span> the rating sample of those players with exactly <span class="math inline">\(w\)</span> wins after <span class="math inline">\(j\)</span> rounds. We denote by <span class="math display">\[\bar{r}_w^{(j)} = \text{mean}(\mathcal{R}^{(j)}_w),  \quad \text{and} \quad \sigma_w^{(j)} = \text{Var}(\mathcal{R}^{(j)}_w)\]</span> the emprical mean and variance of this rating sample. The expected win probability on a player with rating <span class="math inline">\(x\)</span> within the score bracket “<span class="math inline">\(w\)</span> wins after <span class="math inline">\(j\)</span> rounds” can then be approximated by <span class="math display">\[p_w^{(j)} (x) \approx \left|\mathcal{R}^{(j)}_w\right|^{(-1)} \sum_{y \in \mathcal{R}^{(j)}_w}\frac{1}{1 + 10^{-(x - y)/c}}\]</span> <span class="math display">\[\approx
+\int_{\mathbb{R}} \frac{1}{1 + 10^{-(x - y) / c}} \, \varphi(y, \bar{r}_w^{(j)}, \sigma_w^{(j)}) dy,\]</span> where <span class="math inline">\(\varphi(\cdot, r, \sigma)\)</span> denotes the density of a normal distribution with mean <span class="math inline">\(r\)</span> and variance <span class="math inline">\(\sigma\)</span>. This integral is a rather complicated way to write the solution for the following calculations:</p>
 <ol style="list-style-type: decimal">
-<li><p>What are frequent ratings within in the score bracket “<span class="math">\(w\)</span> wins after <span class="math">\(j\)</span> rounds”?</p></li>
+<li><p>What are frequent ratings within in the score bracket “<span class="math inline">\(w\)</span> wins after <span class="math inline">\(j\)</span> rounds”?</p></li>
 <li><p>What are the win probabilities against those ratings?</p></li>
 <li><p>What is the resulting average win probability?</p></li>
 </ol>
-<p>This formula gives a translation <em>rating into win probability</em>“. Conversely, for a given score bracket and a given win probability within this bracket we can compute the virtual rating that corresponds to that win probability. To do so, one has to find the rating <span class="math">\(x^*\)</span> such that <span class="math">\[p_w^{(j)} (x^*) = p^*,\]</span> where <span class="math">\(p^*\)</span> is the desired win probability. This equation can be easily solved numerically (read: it cannot be solved easily).</p>
+<p>This formula gives a translation <em>rating into win probability</em>“. Conversely, for a given score bracket and a given win probability within this bracket we can compute the virtual rating that corresponds to that win probability. To do so, one has to find the rating <span class="math inline">\(x^*\)</span> such that <span class="math display">\[p_w^{(j)} (x^*) = p^*,\]</span> where <span class="math inline">\(p^*\)</span> is the desired win probability. This equation can be easily solved numerically (read: it cannot be solved easily).</p>
 <p>Now it’s time to reap the rewards. By applying a certain rating to all possible score brackets within a GP we obtain all respective win probabilities. As the tournament progresses these score dependent changes in the expected win probability per round thus form a shape of a tree branch as seen below. For this example graphic I set the protagonist’s rating to 1554, i.e. the mean rating in a GP. The underlying rating parameters to produce this tree were those from the MTGELOPROJECT data given above.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="../wpt/wpt.png" alt="Win probability tree for an average GP player."  />
@@ -280,12 +280,12 @@ Figure 3: Win probability tree for an average GP player.
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://mtganalyze.github.io/post/who-am-i/" data-toggle="tooltip" data-placement="top" title="Who am I?">&larr; Previous Post</a>
+            <a href="/post/who-am-i/" data-toggle="tooltip" data-placement="top" title="Who am I?">&larr; Previous Post</a>
           </li>
         
         
           <li class="next">
-            <a href="https://mtganalyze.github.io/post/extract_value/" data-toggle="tooltip" data-placement="top" title="Extracted Value">Next Post &rarr;</a>
+            <a href="/post/extract_value/" data-toggle="tooltip" data-placement="top" title="Extracted Value">Next Post &rarr;</a>
           </li>
         
       </ul>
@@ -365,7 +365,7 @@ Figure 3: Win probability tree for an average GP player.
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://mtganalyze.github.io">MTGANALYZE</a>
+            <a href="/">MTGANALYZE</a>
           
         </p>
         
@@ -382,13 +382,13 @@ Figure 3: Win probability tree for an average GP player.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://mtganalyze.github.io/js/main.js"></script>
-<script src="https://mtganalyze.github.io/js/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-<script src="https://mtganalyze.github.io/js/load-photoswipe.js"></script>
+<script src="/js/load-photoswipe.js"></script>
 
 
 

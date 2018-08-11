@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on MTGANALYZE</title>
-    <link>https://mtganalyze.github.io/page/</link>
+    <link>/page/</link>
     <description>Recent content in Pages on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     
-	<atom:link href="https://mtganalyze.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About this blog</title>
-      <link>https://mtganalyze.github.io/page/about/</link>
+      <link>/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>mtganalyze@gmail.com (Felix Weidemann)</author>
-      <guid>https://mtganalyze.github.io/page/about/</guid>
+      <guid>/page/about/</guid>
       <description>Magic: the Gathering is a game bigger than its box. With over 10,000 individual cards Magic offers endless possibilities to play.
 Using mathematical and statistical tools I try to find analytical solutions for imho interesting quantitative problems in and around the game. This blog won&amp;rsquo;t make you a better player but it will show you underappreciated puzzles within the world of Magic. You can find out more about me in my introductory post.</description>
     </item>

@@ -17,27 +17,27 @@ Just recently I presented a rather convoluted way to assess the strength of any 
   <meta name="twitter:description" content="Today you can follow me on an expedition. After having rolled out the treasure map in my last post we will now take up the quest. Our target is nothing less than the Holy Grail of Limited Magic:
 Today …">
   <meta name="author" content="Felix Weidemann"/>
-  <link href='https://mtganalyze.github.io/img/icon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
-  <meta name="twitter:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <link href='/img/icon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/theorist.jpg" />
+  <meta name="twitter:image" content="/img/theorist.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@mtganalyze" />
   <meta name="twitter:creator" content="@mtganalyze" />
-  <meta property="og:url" content="https://mtganalyze.github.io/post/curve_considerations_continued/" />
+  <meta property="og:url" content="/post/curve_considerations_continued/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="MTGANALYZE" />
 
   <meta name="generator" content="Hugo 0.26" />
-  <link rel="canonical" href="https://mtganalyze.github.io/post/curve_considerations_continued/" />
-  <link rel="alternate" href="https://mtganalyze.github.io/index.xml" type="application/rss+xml" title="MTGANALYZE">
+  <link rel="canonical" href="/post/curve_considerations_continued/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="MTGANALYZE">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/highlight.min.css" />
+  <link rel="stylesheet" href="/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" />
 
 
 
@@ -103,7 +103,7 @@ Today …">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://mtganalyze.github.io">MTGANALYZE</a>
+      <a class="navbar-brand" href="/">MTGANALYZE</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -131,8 +131,8 @@ Today …">
     <div class="avatar-container">
       <div class="avatar-img-border">
         
-          <a title="MTGANALYZE" href="https://mtganalyze.github.io">
-            <img class="avatar-img" src="https://mtganalyze.github.io/img/theorist.jpg" alt="MTGANALYZE" />
+          <a title="MTGANALYZE" href="/">
+            <img class="avatar-img" src="/img/theorist.jpg" alt="MTGANALYZE" />
           </a>
         
       </div>
@@ -210,7 +210,7 @@ Figure 1: Copyright owned by Wizards of the Coast
 </style>
 <p>The evaluation procedure presented in the previous post was based on two steps. First, a mana curve was first translated into a mean executed curve, which represents the average amount of mana a deck is capable to spent over the single turns. Afterwards this executed curve is evaluated using an index measure, that weighs the relative impact of each turn in order to derive one single score for the original curve. As a reasonable index measure we derived a so-called <em>Discount-Index</em>, in which the impact of spent mana shrinks by a certain factor each turn.</p>
 <p>Given such an index measure our search for an optimal mana curve is indeed a somewhat adventurous quest, even from a mathematical perspective. If you are interested in the potential pitfalls of finding the best curve, continue reading this section. Otherwise don’t hesitate to skip to the next section.</p>
-<p>At first glance, the problem looks like a basic optimization problem. In school many of us have learned how to find the optimum of a function: Calculate some derivatives and find its roots, i.e. points where the derivative becomes zero. This approach unfortunately does not work for our index function, since the index takes a deck configuration as its argument instead of some real-valued variable <span class="math">\(x\)</span>.</p>
+<p>At first glance, the problem looks like a basic optimization problem. In school many of us have learned how to find the optimum of a function: Calculate some derivatives and find its roots, i.e. points where the derivative becomes zero. This approach unfortunately does not work for our index function, since the index takes a deck configuration as its argument instead of some real-valued variable <span class="math inline">\(x\)</span>.</p>
 <p>Thus, we have to use an optimization algorithm that searches over the various possible deck configurations by trying different combinations of converted mana cost counts. Luckily, there is a plethora of various algorithms which do exactly that. The most simple versions start at a certain deck configuration, i.e. mana curve, compute the corresponding index and then iteratively exchange single cards in the deck, e.g. switch a two-drop for a three-drop or for a land, and check whether the index increased by the card exchange. By doing so, the algorithm steadily finds a better curve until it arrives at the optimal configuration at which no further improvement is possible.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="../images/search.jpg" alt="Copyright owned by Wizards of the Coast"  />
@@ -218,34 +218,34 @@ Figure 1: Copyright owned by Wizards of the Coast
 Figure 2: Copyright owned by Wizards of the Coast
 </p>
 </div>
-<p>However, such an algrithm is still not sufficient for our purposes for the following reason: we don’t even really know the function to optimize. <em>“Wait, what? Then what was all that previous post about?”</em> you might ask. What I mean by that is, that we actually derived a <em>random</em> measure for evaluating a mana curve, since it <em>samples</em> some larger number of executed curves and calculates the average index based on this sample. If one would repeat this procedure one would actually obtain a different index result, that is of course rather close to the first one dependending on the size of the two respective samples. However, the exact true index result could only be obtained by sampling infinite deck configurations (or just try every possible of the <span class="math">\(40! = 40 \cdot 39 \cdot 38 \ldots\)</span>, which is also practically infinite) – this is not what we want to do.</p>
+<p>However, such an algrithm is still not sufficient for our purposes for the following reason: we don’t even really know the function to optimize. <em>“Wait, what? Then what was all that previous post about?”</em> you might ask. What I mean by that is, that we actually derived a <em>random</em> measure for evaluating a mana curve, since it <em>samples</em> some larger number of executed curves and calculates the average index based on this sample. If one would repeat this procedure one would actually obtain a different index result, that is of course rather close to the first one dependending on the size of the two respective samples. However, the exact true index result could only be obtained by sampling infinite deck configurations (or just try every possible of the <span class="math inline">\(40! = 40 \cdot 39 \cdot 38 \ldots\)</span>, which is also practically infinite) – this is not what we want to do.</p>
 <p>In order to overcome this issue of uncertainty about the <em>true</em> index result of any mana curve we have to apply some statistics. Although due to the stochastic nature of the index measure, we can not be one-hundred-percent sure which one of two competing mana curves has a higher mean index, a statistical test might yield a more or less certain result when comparing the two respective index samples. The algorithm below does exactly that. Instead of computing the index measure of each mana curve for a preset sample size of executed curves, it increases the sample size if necessary in order to decide which of two mana curves yield a higher index.</p>
 <div class="technical">
-<h4>Algorithm: Mana Curve Optimization</h4>
-<p>As in the previous post, let <span class="math">\(\mathbf{x}=(x_1, \ldots, x_n)\)</span> be a decklist, where <span class="math">\(x_i\)</span> denotes the number of cards with converted mana cost <span class="math">\(i\)</span> up to <span class="math">\(n\)</span> (<span class="math">\(n=8\)</span> in our case), and let <span class="math">\(Y(\mathbf{x})\)</span> be a random executed curve based on <span class="math">\(\mathbf{x}\)</span>. Thus <span class="math">\(Y(\mathbf{x})\)</span> represents a random variable with components <span class="math">\((Y_1, Y_2, Y_3, \ldots)\)</span> which refer to the amount of mana spent in each turn.</p>
-<p>Let <span class="math">\(\mathcal{I}(y)\)</span> be the index measure given the executed curve <span class="math">\(y\)</span>. Thus, <span class="math">\(\mathcal{I}(Y(\mathbf{x}))\)</span> refers to the random variable representing the index measure of <span class="math">\(x\)</span> based only on <strong>one</strong> sampled executed curve. In the following we will denote by <span class="math">\(I(\mathbf{x})\)</span> one realization of this “one-sample” index of <span class="math">\(\mathbf{x}\)</span>.</p>
-<p>The search algorithm to find for the optimal mana curve goes as follows. Let <span class="math">\(\mathbf{x}^{(0)}\)</span> be some initial deck configuration and let <span class="math">\(I^{(k)}(\mathbf{x}^{(0)})\)</span>, (<span class="math">\(k = 1,\ldots, 100\)</span>), be a sample of index evaluations for the deck configuration <span class="math">\(\mathbf{x}^{(0)}\)</span>.</p>
+<h4 id="algorithm-mana-curve-optimization">Algorithm: Mana Curve Optimization</h4>
+<p>As in the previous post, let <span class="math inline">\(\mathbf{x}=(x_1, \ldots, x_n)\)</span> be a decklist, where <span class="math inline">\(x_i\)</span> denotes the number of cards with converted mana cost <span class="math inline">\(i\)</span> up to <span class="math inline">\(n\)</span> (<span class="math inline">\(n=8\)</span> in our case), and let <span class="math inline">\(Y(\mathbf{x})\)</span> be a random executed curve based on <span class="math inline">\(\mathbf{x}\)</span>. Thus <span class="math inline">\(Y(\mathbf{x})\)</span> represents a random variable with components <span class="math inline">\((Y_1, Y_2, Y_3, \ldots)\)</span> which refer to the amount of mana spent in each turn.</p>
+<p>Let <span class="math inline">\(\mathcal{I}(y)\)</span> be the index measure given the executed curve <span class="math inline">\(y\)</span>. Thus, <span class="math inline">\(\mathcal{I}(Y(\mathbf{x}))\)</span> refers to the random variable representing the index measure of <span class="math inline">\(x\)</span> based only on <strong>one</strong> sampled executed curve. In the following we will denote by <span class="math inline">\(I(\mathbf{x})\)</span> one realization of this “one-sample” index of <span class="math inline">\(\mathbf{x}\)</span>.</p>
+<p>The search algorithm to find for the optimal mana curve goes as follows. Let <span class="math inline">\(\mathbf{x}^{(0)}\)</span> be some initial deck configuration and let <span class="math inline">\(I^{(k)}(\mathbf{x}^{(0)})\)</span>, (<span class="math inline">\(k = 1,\ldots, 100\)</span>), be a sample of index evaluations for the deck configuration <span class="math inline">\(\mathbf{x}^{(0)}\)</span>.</p>
 <ol style="list-style-type: decimal">
-<li><p>For <span class="math">\(j = 1\)</span> to some preset number of iterations <span class="math">\(N\)</span> repeat the following steps 2) to 5).</p></li>
-<li><p>Propose a new random candidate deck list <span class="math">\(\mathbf{x}^{*}\)</span> by modifying the currently best deck list <span class="math">\(\mathbf{x}^{(j-1)}\)</span> according to <span class="math">\[x^{*}_i = x^{(j-1)}_i + \Delta_i,\]</span> where <span class="math">\(\Delta_i\)</span> (<span class="math">\(i = 1, \ldots, n\)</span>) is zero with probability <span class="math">\(1/2\)</span> and one or minuns one with probability <span class="math">\(1/4\)</span>, respectively. Repeat this process, if the so proposed deck list is ill-defined, e.g. if it has more than 40 cards or any mana slot has less than zero cards.</p></li>
-<li><p>Check if there are already some index evaluations <span class="math">\(I^{(k)}(\mathbf{x}^{*})\)</span>, (<span class="math">\(k = 1,\ldots, K\)</span>), subject to the proposed deck list available (from previous suggestions of the exact same deck list). If not, generate and compute a sample of <span class="math">\(K = 100\)</span> index evaluations <span class="math">\(I^{(k)}(\mathbf{x}^{*})\)</span>.</p></li>
-<li><p>Perform a <a href="https://en.wikipedia.org/wiki/Student%27s_t-test">t-Test</a> in order to check whether the index mean of the two samples <span class="math">\(\{I^{(k)}(\mathbf{x}^{*})\}\)</span> and <span class="math">\(\{I^{(k)}(\mathbf{x}^{(j-1)})\}\)</span> are different. Then, …</p></li>
+<li><p>For <span class="math inline">\(j = 1\)</span> to some preset number of iterations <span class="math inline">\(N\)</span> repeat the following steps 2) to 5).</p></li>
+<li><p>Propose a new random candidate deck list <span class="math inline">\(\mathbf{x}^{*}\)</span> by modifying the currently best deck list <span class="math inline">\(\mathbf{x}^{(j-1)}\)</span> according to <span class="math display">\[x^{*}_i = x^{(j-1)}_i + \Delta_i,\]</span> where <span class="math inline">\(\Delta_i\)</span> (<span class="math inline">\(i = 1, \ldots, n\)</span>) is zero with probability <span class="math inline">\(1/2\)</span> and one or minuns one with probability <span class="math inline">\(1/4\)</span>, respectively. Repeat this process, if the so proposed deck list is ill-defined, e.g. if it has more than 40 cards or any mana slot has less than zero cards.</p></li>
+<li><p>Check if there are already some index evaluations <span class="math inline">\(I^{(k)}(\mathbf{x}^{*})\)</span>, (<span class="math inline">\(k = 1,\ldots, K\)</span>), subject to the proposed deck list available (from previous suggestions of the exact same deck list). If not, generate and compute a sample of <span class="math inline">\(K = 100\)</span> index evaluations <span class="math inline">\(I^{(k)}(\mathbf{x}^{*})\)</span>.</p></li>
+<li><p>Perform a <a href="https://en.wikipedia.org/wiki/Student%27s_t-test">t-Test</a> in order to check whether the index mean of the two samples <span class="math inline">\(\{I^{(k)}(\mathbf{x}^{*})\}\)</span> and <span class="math inline">\(\{I^{(k)}(\mathbf{x}^{(j-1)})\}\)</span> are different. Then, …</p></li>
 </ol>
 <ul>
-<li><p>…if the test suggests the candidate deck list <span class="math">\(\mathbf{x}^{*}\)</span> to yield higher index measures (at a significance level of <span class="math">\(\alpha = 0.001\)</span>), set the so far optimal deck list <span class="math">\(\mathbf{x}^{(j)} = \mathbf{x}^{*}\)</span>.</p></li>
-<li><p>…if the test suggests the previously optimal deck list <span class="math">\(\mathbf{x}^{(j-1))}\)</span> to yield higher index measures, set the so far optimal deck list <span class="math">\(\mathbf{x}^{(j)} = \mathbf{x}^{(j-1)}\)</span>.</p></li>
+<li><p>…if the test suggests the candidate deck list <span class="math inline">\(\mathbf{x}^{*}\)</span> to yield higher index measures (at a significance level of <span class="math inline">\(\alpha = 0.001\)</span>), set the so far optimal deck list <span class="math inline">\(\mathbf{x}^{(j)} = \mathbf{x}^{*}\)</span>.</p></li>
+<li><p>…if the test suggests the previously optimal deck list <span class="math inline">\(\mathbf{x}^{(j-1)}\)</span> to yield higher index measures, set the so far optimal deck list <span class="math inline">\(\mathbf{x}^{(j)} = \mathbf{x}^{(j-1)}\)</span>.</p></li>
 <li><p>…if the test does not detect a statistically significant difference in the mean index measure, double the number of index samples for the deck with fewer index sample or, if the sample size was equal for both decks, double both samples. If both samples already exceed 100.000 index evaluations, do not sample any additional index evaluations and take the decklist which yields the higher mean index result (although not statistically significant) as the so far best deck list.</p></li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
 <li>Store the proposed deck list and all its sampled index evaluations for reusability within the algorithm.</li>
 </ol>
-The final result of this algorithm is a decklist <span class="math">\(\mathbf{x}^{(N)}\)</span> which yields higher index results than all other along the way proposed deck configurations. Furthermore, the difference is actually statistically meaningful or otherwise based on a sufficiently large enough sample of index evaluations such that the actual mean index measure difference is marginal.
+<p>The final result of this algorithm is a decklist <span class="math inline">\(\mathbf{x}^{(N)}\)</span> which yields higher index results than all other along the way proposed deck configurations. Furthermore, the difference is actually statistically meaningful or otherwise based on a sufficiently large enough sample of index evaluations such that the actual mean index measure difference is marginal.</p>
 </div>
 </div>
 <div id="the-optimal-mana-curve" class="section level2">
 <h2>The optimal mana curve</h2>
 <p>I applied the above search algorithm to the Discount-Index for various discount factors from 0.55 to 0.8 as presented in the last post. As a reminder, higher discount factors put more weight on the later turns and thus the corresponding index assesses deck performance within slower games.</p>
-<p>As a result from the search algorithm we do not only obtain the optimal mana curve for each index, but also a ranked list of mana curves together with their respective index results. Thus, we can assess the difference between the best and second best mana curve in terms of mean index result and the statistical significance of the difference to the best curve in terms of a <a href="https://en.wikipedia.org/wiki/P-value">p-value</a>. The p-value provides the probability for observing the actually measured difference in the mean index results of two deck lists assuming that both deck’s indices have the same mean. If you read the previous sentence multiple times and still don’t have clue: A p-value somewhere below 0.05 is widely considered to be a signal for an actual difference between two decks, whereas p-values above 0.05 don’t really tell us much about the existence of a real difference. In other words: even after having goldfished each of two decks about one-hundred thousand times, <span class="math">\(p &gt;0.05\)</span> means we are still not sure whether there is actually a difference between two mana curves. Here are the results:</p>
+<p>As a result from the search algorithm we do not only obtain the optimal mana curve for each index, but also a ranked list of mana curves together with their respective index results. Thus, we can assess the difference between the best and second best mana curve in terms of mean index result and the statistical significance of the difference to the best curve in terms of a <a href="https://en.wikipedia.org/wiki/P-value">p-value</a>. The p-value provides the probability for observing the actually measured difference in the mean index results of two deck lists assuming that both deck’s indices have the same mean. If you read the previous sentence multiple times and still don’t have clue: A p-value somewhere below 0.05 is widely considered to be a signal for an actual difference between two decks, whereas p-values above 0.05 don’t really tell us much about the existence of a real difference. In other words: even after having goldfished each of two decks about one-hundred thousand times, <span class="math inline">\(p &gt;0.05\)</span> means we are still not sure whether there is actually a difference between two mana curves. Here are the results:</p>
 <p><em>Erratum: I found and corrected a small bug in my code. Thus, the following results were updated on 2018/01/19. The overall take aways however remain the same.</em></p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="../curveevaluation/curveresults.png" alt="Results from mana curve optimization for different Discount-Indices. Left: Table with top 8 deck lists and respective mean index results. Right: Optimal mana curve per Index."  />
@@ -257,7 +257,7 @@ Figure 3: Results from mana curve optimization for different Discount-Indices. L
 <ol style="list-style-type: decimal">
 <li><p>For each different Discount-Index, the optimal mana curve has indeed a more or less bell-shapy curve. However, the higher the underlying discount factor, the more expensive are the mana costs around the peak of the curve and the overall average costs of the spells. This is somewhat clear as higher discount factors allow for slower games. This effect is even so pronounced, that for the fastest curve index (discount factor 0.55) four-drops are almost too expensive whereas according to the slower index (0.75 or higher) any one-drops or even two-drops become garbage.</p></li>
 <li><p>The optimal land count ranges from 14 lands for cheap fast game mana curves up to 18 lands for the expensive curves within slow games. This is probably one or two lands fewer than most players would intuitively put into those decks considering the respective curve.</p></li>
-<li><p>The optimal mana curve is not significantly better than the next best curve configurations as indicated by the tables shown along the optimal curves. The actual difference in the index results is neglible if only a few card slots are exchanged, e.g. for the 0.65 Discount-Index the mana curve of <span class="math">\((6, 8, 7, 4, 0)\)</span> is effectively equal to a mana curve of <span class="math">\((5, 8, 6, 4, 1)\)</span> which even plays an additional land. The difference is not even statistically significant after over 100.000 simulated curve executions as indicated by the p-value. Thus, the optimal curve does not represent a peak of a steep ascent but rather a top of a shallow hill, almost plateau-like.</p></li>
+<li><p>The optimal mana curve is not significantly better than the next best curve configurations as indicated by the tables shown along the optimal curves. The actual difference in the index results is neglible if only a few card slots are exchanged, e.g. for the 0.65 Discount-Index the mana curve of <span class="math inline">\((6, 8, 7, 4, 0)\)</span> is effectively equal to a mana curve of <span class="math inline">\((5, 8, 6, 4, 1)\)</span> which even plays an additional land. The difference is not even statistically significant after over 100.000 simulated curve executions as indicated by the p-value. Thus, the optimal curve does not represent a peak of a steep ascent but rather a top of a shallow hill, almost plateau-like.</p></li>
 </ol>
 <div id="reminder-text" class="section level3">
 <h3>Reminder Text</h3>
@@ -284,12 +284,12 @@ Figure 4: Copyright owned by Wizards of the Coast
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://mtganalyze.github.io/post/curve_considerations/" data-toggle="tooltip" data-placement="top" title="Curve Considerations">&larr; Previous Post</a>
+            <a href="/post/curve_considerations/" data-toggle="tooltip" data-placement="top" title="Curve Considerations">&larr; Previous Post</a>
           </li>
         
         
           <li class="next">
-            <a href="https://mtganalyze.github.io/post/concluding_curve-considerations/" data-toggle="tooltip" data-placement="top" title="Concluding Considerations Concerning Curves">Next Post &rarr;</a>
+            <a href="/post/concluding_curve-considerations/" data-toggle="tooltip" data-placement="top" title="Concluding Considerations Concerning Curves">Next Post &rarr;</a>
           </li>
         
       </ul>
@@ -369,7 +369,7 @@ Figure 4: Copyright owned by Wizards of the Coast
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://mtganalyze.github.io">MTGANALYZE</a>
+            <a href="/">MTGANALYZE</a>
           
         </p>
         
@@ -386,13 +386,13 @@ Figure 4: Copyright owned by Wizards of the Coast
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://mtganalyze.github.io/js/main.js"></script>
-<script src="https://mtganalyze.github.io/js/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-<script src="https://mtganalyze.github.io/js/load-photoswipe.js"></script>
+<script src="/js/load-photoswipe.js"></script>
 
 
 

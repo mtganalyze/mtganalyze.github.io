@@ -12,27 +12,27 @@
   <meta property="og:description" content="Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job as an arctic explorer you rarely find time to play any bigger Magic events these days. It’s Friday and since you have no byes for the GP you are eager to play some trials. Surprisingly, Wizards Organized Play restructered the usual side event schedule.">
   <meta name="twitter:description" content="Let’s start with a small thought experiment: You are a semi-competitive and value-oriented Magic player. You just arrived at the site of the Grand Prix located near your home town. Due to your new job …">
   <meta name="author" content="Felix Weidemann"/>
-  <link href='https://mtganalyze.github.io/img/icon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
-  <meta name="twitter:image" content="https://mtganalyze.github.io/img/theorist.jpg" />
+  <link href='/img/icon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/theorist.jpg" />
+  <meta name="twitter:image" content="/img/theorist.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@mtganalyze" />
   <meta name="twitter:creator" content="@mtganalyze" />
-  <meta property="og:url" content="https://mtganalyze.github.io/post/extract_value/" />
+  <meta property="og:url" content="/post/extract_value/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="MTGANALYZE" />
 
   <meta name="generator" content="Hugo 0.26" />
-  <link rel="canonical" href="https://mtganalyze.github.io/post/extract_value/" />
-  <link rel="alternate" href="https://mtganalyze.github.io/index.xml" type="application/rss+xml" title="MTGANALYZE">
+  <link rel="canonical" href="/post/extract_value/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="MTGANALYZE">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="https://mtganalyze.github.io/css/highlight.min.css" />
+  <link rel="stylesheet" href="/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" />
 
 
 
@@ -98,7 +98,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://mtganalyze.github.io">MTGANALYZE</a>
+      <a class="navbar-brand" href="/">MTGANALYZE</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -126,8 +126,8 @@
     <div class="avatar-container">
       <div class="avatar-img-border">
         
-          <a title="MTGANALYZE" href="https://mtganalyze.github.io">
-            <img class="avatar-img" src="https://mtganalyze.github.io/img/theorist.jpg" alt="MTGANALYZE" />
+          <a title="MTGANALYZE" href="/">
+            <img class="avatar-img" src="/img/theorist.jpg" alt="MTGANALYZE" />
           </a>
         
       </div>
@@ -195,24 +195,24 @@ Figure 1: Copyright owned by Wizards of the Coast
 <h2>WPT based score distributions</h2>
 <p>In order to compute the expected winnings within a tournament we need two things. Firstly, we need to know how likely is each possible final tournament score. Secondly, we need information on what payout is associated with each of those scores. Combining these, we can compute the average, i.e. the expected, payout. In this section we focus on the final score distribution.</p>
 <p>In my <a href="https://mtganalyze.github.io/post/skills_and_scores/">last post</a> I introduced the win probability tree (WPT), which – for a player with a certain skill – assigned a win probability to each possible score bracket within a GP. Skill was thereby defined as a specific rating according to <a href="http://www.mtgeloproject.net/">MTGELOPROJECT</a>. For our purposes, the distribution of the final tournament score of the player can be directly derived from his WPT.</p>
-<p>To do so, we again denote by <span class="math">\(p_w^{(j)}(x)\)</span> the probability of winning a match within the score bracket “w wins after j rounds” given your rating of <span class="math">\(x\)</span>. For instance, <span class="math">\(p_1^{(2)}(x)\)</span> refers to the probability of winning your third round, if you have one win after two rounds. We now denote by <span class="math">\(\pi_w^{(j)}(x)\)</span> the probability of reaching the bracket “w wins after j rounds”. Thus, the vector <span class="math">\[\mathbf{\pi}^{(j)}(x) = \left( \pi_0^{(j)}(x), \ldots, \pi_j^{(j)}(x) \right)\]</span> represents the distribution over the possible scores, i.e. number of wins, after round <span class="math">\(j\)</span>. Assuming, you start with no byes, then your initial score is zero wins after zero rounds, which corresponds to a score distribution of <span class="math">\[\mathbf{\pi}^{(0)}(x) = \left( 1 \right).\]</span> The score distribution for the subsequent rounds can then be computed recursively via <span class="math">\[\pi_w^{(j)}(x) = \pi_w^{(j-1)}(x) \cdot (1-p_w^{(j-1)}(x)) +  \pi_{w-1}^{(j-1)}(x) \cdot p_{w-1}^{(j-1)}(x).\]</span> This formula for computing the probability of having <span class="math">\(w\)</span> wins after <span class="math">\(j\)</span> rounds looks only at the two possibilities, that you either already had <span class="math">\(w\)</span> wins after the previous rounds and lose the <span class="math">\(j\)</span>-th match or you had <span class="math">\(w-1\)</span> wins and win the <span class="math">\(j\)</span>-th match. For the two special cases of having either only wins (<span class="math">\(\pi_j^{(j)}(x)\)</span>) or having no wins (<span class="math">\(\pi_0^{(j)}(x)\)</span>) one of the two terms must be omitted accordingly. This recursive formula must be applied to compute every possible score for each round up to the final round of the tournament, e.g. for all 15 rounds within a GP.</p>
-<p>Note, that if the tournament has a day 2 cut requiring <span class="math">\(w^*\)</span> wins after <span class="math">\(j^*\)</span> rounds, we have to set the win probability <span class="math">\(p_w^{(j)}(x) = 0\)</span> if <span class="math">\(w &lt; w^*\)</span> and <span class="math">\(j \geq j^*\)</span>, as it is rather unlikely to win any more matches if you haven’t made the cut.</p>
-<p>The same procedure can be applied if we are interested in the final score distribution from a certain point during the tournament, e.g. from a score of 5-1. We just have to use a different initial distribution. Using the score of 5-1 as an example, we would have to set <span class="math">\[\mathbf{\pi}^{(6)}(x) = \left(0, 0, 0, 0, 0, 1, 0 \right),\]</span> such that the bracket “5 wins after 6 rounds” is assigned a probability of 100%. The subseqent score distributions for the following rounds could then again be computed recursively starting with this “distribution”.</p>
+<p>To do so, we again denote by <span class="math inline">\(p_w^{(j)}(x)\)</span> the probability of winning a match within the score bracket “w wins after j rounds” given your rating of <span class="math inline">\(x\)</span>. For instance, <span class="math inline">\(p_1^{(2)}(x)\)</span> refers to the probability of winning your third round, if you have one win after two rounds. We now denote by <span class="math inline">\(\pi_w^{(j)}(x)\)</span> the probability of reaching the bracket “w wins after j rounds”. Thus, the vector <span class="math display">\[\mathbf{\pi}^{(j)}(x) = \left( \pi_0^{(j)}(x), \ldots, \pi_j^{(j)}(x) \right)\]</span> represents the distribution over the possible scores, i.e. number of wins, after round <span class="math inline">\(j\)</span>. Assuming, you start with no byes, then your initial score is zero wins after zero rounds, which corresponds to a score distribution of <span class="math display">\[\mathbf{\pi}^{(0)}(x) = \left( 1 \right).\]</span> The score distribution for the subsequent rounds can then be computed recursively via <span class="math display">\[\pi_w^{(j)}(x) = \pi_w^{(j-1)}(x) \cdot (1-p_w^{(j-1)}(x)) +  \pi_{w-1}^{(j-1)}(x) \cdot p_{w-1}^{(j-1)}(x).\]</span> This formula for computing the probability of having <span class="math inline">\(w\)</span> wins after <span class="math inline">\(j\)</span> rounds looks only at the two possibilities, that you either already had <span class="math inline">\(w\)</span> wins after the previous rounds and lose the <span class="math inline">\(j\)</span>-th match or you had <span class="math inline">\(w-1\)</span> wins and win the <span class="math inline">\(j\)</span>-th match. For the two special cases of having either only wins (<span class="math inline">\(\pi_j^{(j)}(x)\)</span>) or having no wins (<span class="math inline">\(\pi_0^{(j)}(x)\)</span>) one of the two terms must be omitted accordingly. This recursive formula must be applied to compute every possible score for each round up to the final round of the tournament, e.g. for all 15 rounds within a GP.</p>
+<p>Note, that if the tournament has a day 2 cut requiring <span class="math inline">\(w^*\)</span> wins after <span class="math inline">\(j^*\)</span> rounds, we have to set the win probability <span class="math inline">\(p_w^{(j)}(x) = 0\)</span> if <span class="math inline">\(w &lt; w^*\)</span> and <span class="math inline">\(j \geq j^*\)</span>, as it is rather unlikely to win any more matches if you haven’t made the cut.</p>
+<p>The same procedure can be applied if we are interested in the final score distribution from a certain point during the tournament, e.g. from a score of 5-1. We just have to use a different initial distribution. Using the score of 5-1 as an example, we would have to set <span class="math display">\[\mathbf{\pi}^{(6)}(x) = \left(0, 0, 0, 0, 0, 1, 0 \right),\]</span> such that the bracket “5 wins after 6 rounds” is assigned a probability of 100%. The subseqent score distributions for the following rounds could then again be computed recursively starting with this “distribution”.</p>
 <p>The biggest difference of applying the WPT based probabilities instead of assuming a stationary match win probability is that the resulting distribution is somewhat self-correcting. This is a consequence of the dynamic behaviour of match win probabilities within the WPT, which decrease after every match win and increase again after every loss. Thus, the final score distribution is a little under-dispersed, meaning that is has less variance than the simpler binomial distribution. Furthermore, the probability for achieving high scores of X-1 or X-2 is generally smaller, since the match win probability shrinks on the way to get there.</p>
 </div>
 <div id="score-associated-payouts" class="section level2">
 <h2>Score-associated payouts</h2>
 <p>Unfortunately, Knowing your final score does not tell you much about the money you win. For GPs and PTs the awarded prize money is tied to your rank in the final standings, which could be within a very wide range for most scores. Moreover, the range of, e.g., 12-3 players in the final standings of a GP depends on the total number of players and their number of byes. In this section I explain how to derive the expected payout for a given final score.</p>
-<p>The approach is basically the same as Frank Karsten used to compute the expected payouts. For a given number of players <span class="math">\(n\)</span> and given number of byes <span class="math">\(b_i\)</span>, (<span class="math">\(i=1,2,3\)</span>) within the first, second and third round, respectively, I first compute the final standings of the corresponding tournament, i.e. for a GP scenario I compute how many players play 15-0, how many play 14-1, and so on. To do so, I apply a similar algorithm as presented in my previous post, which works as follows:</p>
+<p>The approach is basically the same as Frank Karsten used to compute the expected payouts. For a given number of players <span class="math inline">\(n\)</span> and given number of byes <span class="math inline">\(b_i\)</span>, (<span class="math inline">\(i=1,2,3\)</span>) within the first, second and third round, respectively, I first compute the final standings of the corresponding tournament, i.e. for a GP scenario I compute how many players play 15-0, how many play 14-1, and so on. To do so, I apply a similar algorithm as presented in my previous post, which works as follows:</p>
 <ol style="list-style-type: decimal">
-<li><p>All <span class="math">\(n\)</span> players start with a score of zero wins.</p></li>
+<li><p>All <span class="math inline">\(n\)</span> players start with a score of zero wins.</p></li>
 <li><p>For each round repeat steps <strong>3)</strong> to <strong>5)</strong>.</p></li>
 <li><p>Sort the players by score.</p></li>
-<li><p>The first <span class="math">\(b_i\)</span> players receive byes, with <span class="math">\(i\)</span> being the round number.</p></li>
+<li><p>The first <span class="math inline">\(b_i\)</span> players receive byes, with <span class="math inline">\(i\)</span> being the round number.</p></li>
 <li><p>The remaining players are paired by order of current standings, with the first player of each pairing receiving the match win.</p></li>
 <li><p>Make a final sort of the players by final score.</p></li>
 </ol>
-<p>The result of this procedure is a sorted list of all tournament players combined with their respective final scores. This list can then be used to derive the range of each score within the final standings. Thus, for a final number of wins <span class="math">\(w\)</span> let <span class="math">\(h_w\)</span> and <span class="math">\(l_w\)</span> denote the highest (worst) and lowest (best) rank among players with <span class="math">\(w\)</span> wins within the standings. Let <span class="math">\(y_r\)</span> be the <a href="https://magic.wizards.com/en/content/grand-prix-event-types-events">prize</a> <a href="https://magic.wizards.com/en/content/pro-tour-magic-event-types-events">money</a> that is associated with rank <span class="math">\(r\)</span>. Then the average prize money <span class="math">\(m_w\)</span> awarded to a player with <span class="math">\(w\)</span> wins can be calculated by <span class="math">\[m_w = \frac{1}{1+h_w-l_w}\sum_{r=l_w}^{h_w} y_r,\]</span> which is just the total money awarded to players with <span class="math">\(w\)</span> wins devided by the number of these players.</p>
+<p>The result of this procedure is a sorted list of all tournament players combined with their respective final scores. This list can then be used to derive the range of each score within the final standings. Thus, for a final number of wins <span class="math inline">\(w\)</span> let <span class="math inline">\(h_w\)</span> and <span class="math inline">\(l_w\)</span> denote the highest (worst) and lowest (best) rank among players with <span class="math inline">\(w\)</span> wins within the standings. Let <span class="math inline">\(y_r\)</span> be the <a href="https://magic.wizards.com/en/content/grand-prix-event-types-events">prize</a> <a href="https://magic.wizards.com/en/content/pro-tour-magic-event-types-events">money</a> that is associated with rank <span class="math inline">\(r\)</span>. Then the average prize money <span class="math inline">\(m_w\)</span> awarded to a player with <span class="math inline">\(w\)</span> wins can be calculated by <span class="math display">\[m_w = \frac{1}{1+h_w-l_w}\sum_{r=l_w}^{h_w} y_r,\]</span> which is just the total money awarded to players with <span class="math inline">\(w\)</span> wins devided by the number of these players.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="../images/reward.jpg" alt="Copyright owned by Wizards of the Coast"  />
 <p class="caption">
@@ -220,7 +220,7 @@ Figure 2: Copyright owned by Wizards of the Coast
 </p>
 </div>
 <p>The biggest flaw of this appraoch is that it doesn’t account for potential draws during the tournament, wether intentional or not. However, it is still possible to roughly incorporate draws for EV calculation, for instance if you are interested in the EV of a 3-1-1 score. This will be adressed later. Another limitation is that I don’t account for potential prize money and fundings associated with awarded PT invitations.</p>
-<p>Now <a href="https://www.youtube.com/watch?v=kbW5sxyu9bU">let our powers combine</a>! In order to compute the expected prize money payout <span class="math">\(m(x)\)</span> for a certain player with rating <span class="math">\(x\)</span> we can now just link this players final score distribution <span class="math">\(\mathbf{\pi}^{(j)}(x)\)</span> with the score-associated payouts <span class="math">\(m_w\)</span>, i.e. for a GP we have <span class="math">\[m(x) = \sum_{w=0}^{15} \pi_w^{(15)}(x) \cdot m_w.\]</span></p>
+<p>Now <a href="https://www.youtube.com/watch?v=kbW5sxyu9bU">let our powers combine</a>! In order to compute the expected prize money payout <span class="math inline">\(m(x)\)</span> for a certain player with rating <span class="math inline">\(x\)</span> we can now just link this players final score distribution <span class="math inline">\(\mathbf{\pi}^{(j)}(x)\)</span> with the score-associated payouts <span class="math inline">\(m_w\)</span>, i.e. for a GP we have <span class="math display">\[m(x) = \sum_{w=0}^{15} \pi_w^{(15)}(x) \cdot m_w.\]</span></p>
 <div id="average-joes-ev" class="section level4">
 <h4>Average Joe’s EV</h4>
 <p>To provide an example, let’s look at the prize money EV for an average player (Joe) within a 1500 player GP. Joe has a match win percentage of 50% against the overall GP field, which corresponds to an MTGELOPROJECT rating of 1554. For each possible score I computed Joe’ prize money EV, which are shown in the figure below. For this example I used the WPT according to the normal player density as described in my last post.</p>
@@ -273,12 +273,12 @@ Figure 4: Copyright owned by Wizards of the Coast
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://mtganalyze.github.io/post/skills_and_scores/" data-toggle="tooltip" data-placement="top" title="Skills and Scores">&larr; Previous Post</a>
+            <a href="/post/skills_and_scores/" data-toggle="tooltip" data-placement="top" title="Skills and Scores">&larr; Previous Post</a>
           </li>
         
         
           <li class="next">
-            <a href="https://mtganalyze.github.io/post/curve_considerations/" data-toggle="tooltip" data-placement="top" title="Curve Considerations">Next Post &rarr;</a>
+            <a href="/post/curve_considerations/" data-toggle="tooltip" data-placement="top" title="Curve Considerations">Next Post &rarr;</a>
           </li>
         
       </ul>
@@ -358,7 +358,7 @@ Figure 4: Copyright owned by Wizards of the Coast
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://mtganalyze.github.io">MTGANALYZE</a>
+            <a href="/">MTGANALYZE</a>
           
         </p>
         
@@ -375,13 +375,13 @@ Figure 4: Copyright owned by Wizards of the Coast
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://mtganalyze.github.io/js/main.js"></script>
-<script src="https://mtganalyze.github.io/js/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-<script src="https://mtganalyze.github.io/js/load-photoswipe.js"></script>
+<script src="/js/load-photoswipe.js"></script>
 
 
 

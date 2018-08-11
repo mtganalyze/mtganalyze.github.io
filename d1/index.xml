@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D1s on MTGANALYZE</title>
+    <link>/d1/</link>
+    <description>Recent content in D1s on MTGANALYZE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
+    <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
+    
+	<atom:link href="/d1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/d1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>mtganalyze@gmail.com (Felix Weidemann)</author>
+      <guid>/d1/</guid>
+      <description>datatables{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;Distribution: First Pick - First Pack&#34;,&#34;data&#34;:[[&#34;Luminous Bonds&#34;,&#34;Lich&#39;s Caress&#34;,&#34;Electrify&#34;,&#34;Shock&#34;,&#34;Murder&#34;,&#34;Lightning Strike&#34;,&#34;Angel of the Dawn&#34;,&#34;Vine Mare&#34;,&#34;Hieromancer&#39;s Cage&#34;,&#34;Star-Crowned Stag&#34;,&#34;Dryad Greenseeker&#34;,&#34;Pegasus Courser&#34;,&#34;Volcanic Dragon&#34;,&#34;Demanding Dragon&#34;,&#34;Heroic Reinforcements&#34;,&#34;Lathliss, Dragon Queen&#34;,&#34;Psychic Symbiont&#34;,&#34;Herald of Faith&#34;,&#34;Djinn of Wishes&#34;,&#34;Rabid Bite&#34;,&#34;Aven Wind Mage&#34;,&#34;Strangling Spores&#34;,&#34;Banefire&#34;,&#34;Poison-Tip Archer&#34;,&#34;Skyrider Patrol&#34;,&#34;Pelakka Wurm&#34;,&#34;Druid of the Cowl&#34;,&#34;Regal Bloodlord&#34;,&#34;Horizon Scholar&#34;,&#34;Departed Deckhand&#34;,&#34;Spit Flame&#34;,&#34;Gallant Cavalry&#34;,&#34;Isareth the Awakener&#34;,&#34;Boggart Brute&#34;,&#34;Thorn Lieutenant&#34;,&#34;Cleansing Nova&#34;,&#34;Leonin Warleader&#34;,&#34;Vampire Sovereign&#34;,&#34;Exclusion Mage&#34;,&#34;Goreclaw, Terror of Qal Sisma&#34;,&#34;Mentor of the Meek&#34;,&#34;Sparktongue Dragon&#34;,&#34;Windreader Sphinx&#34;,&#34;Resplendent Angel&#34;</description>
+    </item>
+    
+  </channel>
+</rss>
