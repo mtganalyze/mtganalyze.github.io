@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MTGANALYZE</title>
-    <link>/tags/</link>
+    <link>https://mtganalyze.github.io/tags/</link>
     <description>Recent content in Tags on MTGANALYZE</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mtganalyze@gmail.com (Felix Weidemann)</managingEditor>
     <webMaster>mtganalyze@gmail.com (Felix Weidemann)</webMaster>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mtganalyze.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
