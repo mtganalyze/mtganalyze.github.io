@@ -480,7 +480,7 @@ Uncommon
 </tbody>
 </table>
 <p>This table shows the the rating and resulting probability to get picked (P1P1) for each card contained in this randomly sampled booster pack.</p>
-<p>The highest rated card within the booster is <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447430">Herald of Faith</a> with a corresponding pick probability of 55.6 %. Maybe the best interpretation of this probability is that “55.6 % of all players would pick Herald of Faith from this booster”. Within this pack there are also three other cards with a considerable probability to be first picks: <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447539&amp;part=Strangling+Spores">Strangling Spores</a>, <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447612">Rapid Bite</a>, and <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447574">Siegebreaker Giant</a>.</p>
+<p>The highest rated card within the booster is <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447430">Herald of Faith</a> with a corresponding pick probability of 55.6 %. Maybe the best interpretation of this probability is that “55.6 % of all players would pick Herald of Faith from this booster”. Within this pack there are also three other cards with a considerable probability to be first picks: <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447539&amp;part=Strangling+Spores">Strangling Spores</a>, <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447612">Rapid Bite</a>, and maybe <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447209">Skilled Animator</a>.</p>
 <p>Note, that according to the MELO model each card has a non-zero probability to get picked, although the predicted probabilities are close to zero for most cards.</p>
 </div>
 </div>
@@ -496,7 +496,7 @@ Uncommon
 </ol>
 <ol style="list-style-type: lower-alpha">
 <li><p><strong>Generate a random pack</strong>: Based on the rarity distribution for a booster pack of the given <strong>Magic</strong> expansion sample <span class="math inline">\(n_r\)</span> rares/mythics, <span class="math inline">\(n_u\)</span> uncommons, and <span class="math inline">\(n_c\)</span> commons from among <span class="math inline">\(C_1, \ldots, C_M\)</span>. This leads to a random pack containing <span class="math inline">\(n\)</span> distinct cards <span class="math inline">\(C_{i_1}, \ldots, C_{i_n}\)</span>, where <span class="math inline">\(n\)</span> is typically 14 for current expansions.</p></li>
-<li><p><strong>Compute the pick probabilities</strong>: By applying the MELO power to the ratings <span class="math inline">\(x_{i_1}, \ldots, x_{i_n}\)</span> of the cards contained in the pack, compute the probabilities <span class="math inline">\(P_{i_1}, \ldots, P_{i_n}\)</span> for each card to be picked from that pack.</p></li>
+<li><p><strong>Compute the pick probabilities</strong>: By applying the MELO model to the ratings <span class="math inline">\(x_{i_1}, \ldots, x_{i_n}\)</span> of the cards contained in the pack, compute the probabilities <span class="math inline">\(P_{i_1}, \ldots, P_{i_n}\)</span> for each card to be picked from that pack.</p></li>
 <li><p><strong>Store pick probabilities</strong>: For each card <span class="math inline">\(C_{i_j}\)</span> that is contained in pack <span class="math inline">\(k\)</span> we store the pick probability <span class="math inline">\(p^{(k)}_{i_j} = P_{i_j}\)</span> and for each card that was not contained in the pack (<span class="math inline">\(i \neq i_1, \ldots, i_n\)</span>) we set <span class="math inline">\(p^{(k)}_i = 0\)</span>, i.e. those cards had zero chance to be picked from the pack.</p></li>
 </ol>
 <ol start="2" style="list-style-type: decimal">
@@ -880,7 +880,7 @@ Colorless
 </tr>
 </tbody>
 </table>
-<p>Apparently, <em>Red</em> and <em>White</em> are the most frequently first picked colors and that even by a considerable margin. <em>Blue</em> is the color, that is least likely to get first picked by the average player.</p>
+<p>Apparently,<em>White</em> are the most frequently first picked color and that even by a considerable margin. <em>Blue</em> is the color, that is least likely to get first picked by the average player.</p>
 </div>
 <div id="reminder-text" class="section level2">
 <h2>Reminder Text</h2>
